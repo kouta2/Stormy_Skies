@@ -1,0 +1,30 @@
+*{
+	
+	font-family: sans-serif;		
+
+}
+
+.navbar-custom{
+	background-color: #0f2a56;  
+	border-radius: 0px !important; 
+
+}
+
+.query_body{
+	border-style: solid;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: black; 
+	margin: 20px;
+}
+
+.criteria_sidebar{
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-color: black;
+
+}
+
+.insert_criteria{
+	margin: 5px; 
+}

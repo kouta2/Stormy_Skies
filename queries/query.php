@@ -15,12 +15,13 @@
 	    <title>Stormy Skies Stage 4</title> 
 	    <!-- Bootstrap -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet"> 
-	    <link href="css/mine.css" rel = "stylesheet">  
+	    <link href="css/fuck.css" rel = "stylesheet">  
+
   	</head>
 
   	<body>
 
-		 <nav class="navbar navbar-default navbar-custom">
+		<nav class="navbar navbar-default navbar-custom">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -44,7 +45,11 @@
 		     
 		      
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><button type="button" class="btn btn-success navbar-btn">Add Data</button></li>
+		        <li>
+		        	<a href="insert/insert.php">
+		        	<button type="button" class="btn btn-success navbar-btn">Add Data</button>
+		        	</a>
+		        </li>
 		        
 		      </ul>
 
@@ -52,8 +57,46 @@
 		  </div><!-- /.container-fluid -->
 		</nav> 	
 
+		<div class = "query_body">
+			<div class = "row">
 
-    
+				<div class = "col-md-3 criteria_sidebar">
+					<h4>Search Criteria </h4>
+
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Criteria 1</span>
+					</label>
+
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Criteria 1</span>
+					</label>
+
+
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Criteria 1</span>
+					</label>
+
+					<label class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input">
+						<span class="custom-control-indicator"></span>
+						<span class="custom-control-description">Criteria 1</span>
+					</label>
+
+
+				</div>
+
+				<div class = "col-md-9 results_panel">
+					<h4>Results </h4>
+
+				</div>
+			</div>
+		</div>   
    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

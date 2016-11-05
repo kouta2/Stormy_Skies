@@ -16,11 +16,25 @@
 	    <!-- Bootstrap -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="css/mine.css" rel = "stylesheet">  
+
+	    <style>
+	      /* Always set the map height explicitly to define the size of the div
+	       * element that contains the map. */
+	      #map {
+	        height: 100%;
+	      }
+	      /* Optional: Makes the sample page fill the window. */
+	      html, body {
+	        height: 100%;
+	        margin: 0;
+	        padding: 0;
+	      }
+	    </style>
   	</head>
 
   	<body>
 
-		 <nav class="navbar navbar-default navbar-custom">
+		<nav class="navbar navbar-default navbar-custom">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -34,10 +48,10 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a href="query.php" class = "active" >Queries</a></li>
-		        <li><a href="arv_map.php">Minor Weather</a></li>
-		        <li><a href="shw_map.php">Predictions</a></li>
-		        <li><a href="map.php">Map</a></li>
+		        <li><a href="#" class = "active" >Major Weather</a></li>
+		        <li><a href="#">Minor Weather</a></li>
+		        <li><a href="#">Predictions</a></li>
+		        <li><a href="test.php">Map</a></li>
 		        
 		      </ul>
 
@@ -51,6 +65,33 @@
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav> 	
+
+			<div class = "col-md-4">
+		    	
+			</div>
+
+
+			<div class = "col-md-8">
+		    	<div id="map"></div>
+			</div>
+
+			<div class = "col-md-4">
+		    	
+			</div>
+
+		    <script>
+		      var map;
+		      function initMap() {
+		        map = new google.maps.Map(document.getElementById('map'), {
+		          center: {lat: -34.397, lng: 150.644},
+		          zoom: 8
+		        });
+		      }
+		    </script>
+		    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwvDeUmfCVgrrUyU29pb_kWzjW600k3Ac&callback=initMap"
+		    async defer></script>
+  
+  	</body>
 
 
     
