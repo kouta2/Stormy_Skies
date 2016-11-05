@@ -46,10 +46,14 @@
 	var xmlDoc = parser.parseFromString(path,"text/xml"); 
 
 	// xmlDoc.getElementsByTagName(state).childNodes[0].nodeValue;
-	var length = xmlDoc.getElementsByTagName(state)[0].length;
+	var statesize = xmlDoc.getElementsByTagName("state")[0].childNodes.length;
 	var coords = [];
-	for(i = 0; i < length; i++)
+  var state = document.getElementsByTagName("state")[0];
+	for(i = 1; i < statesize; i+=2)
 	{
+      var x = state.childNodes[i].getAttribute("lat");
+      var y = state.childNodes[i].getAttribute("lng");
+      coords.push({lat: x, lng: y}); 
 	}
 
 	// parse state
