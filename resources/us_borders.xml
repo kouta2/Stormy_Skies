@@ -1,4 +1,4 @@
-<state id = "stateId"s>
+<states>
 <state id = "stateId" name="Alaska" colour="#ff0000">
 <point lat="70.0187" lng="-141.0205"></point>
 <point lat="70.1292" lng="-141.7291"></point>
