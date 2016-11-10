@@ -12,7 +12,7 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Stormy Skies Stage 4</title> 
+	    <title>Stormy Skies</title> 
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
@@ -34,7 +34,7 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a href="../queries/query.php" class = "active" >Queries</a></li>
+		        <li><a href="../queries/query_date.php" class = "active" >Queries</a></li>
 		        <li><a href="../predictions/predictions.php">Predictions</a></li>
 		        <li><a href="../map/map.php">Map</a></li>
 		        
@@ -66,47 +66,69 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Name</span>
-					 	<input type="text" class="form-control" id="basic-url" >
+					 	<input id="Name" type="text" class="form-control" id="basic-url" >
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Date</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="mm/dd/yyyy">
+					 	<input id="Date" type="text" class="form-control" id="basic-url" placeholder="mm/dd/yyyy">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">States Affected</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="comma separated list">
+					 	<input id="States Affected" type="text" class="form-control" id="basic-url" placeholder="comma separated list">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon"># of tornados</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input id="# of tornados" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Fatalities</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input id="Fatalities" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
-					<button type="button" class="btn btn-success">Submit</button>					
+					<button onclick="readInputs()" type="button" class="btn btn-success">Submit</button>					
 				</div>
 
 
 			</div>
 		</div> <!--close query body-->
 
-		
+                <p id = "results">
+
+                </p>
+
+                <script>
+                function readInputs() {
+                        var text = ""
+
+                        var x = document.getElementById("Name");
+                        var name = x.value;
+                        x = document.getElementById("Date");
+                        var dat = x.value;
+                        x = document.getElementById("States Affected");
+                        var states_affected = x.value;
+                        x = document.getElementById("# of tornados");
+                        var num_tornados = x.value;
+                        x = document.getElementById("Fatalities");
+                        var fatalities = x.value;
+
+                        text = dat + ", " + states_affected;
+                        document.getElementById("results").innerHTML = text;
+                }
+                </script>		
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

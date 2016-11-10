@@ -44,7 +44,7 @@
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                   if (this.readyState == 4 && this.status == 200) {
-                      putIntoDoc(this);
+                      myFunction(this);
                   }
             };
             xmlhttp.open("GET", "resources/us_borders.xml", true);
@@ -54,8 +54,10 @@
       {
          return xml.responseXML;
       }
-
-	var xmlDoc = loadXMLDoc();
+ 
+	var txt = "";
+	var parser = new DOMParser();
+	var xmlDoc = parser.parseFromString(txt.loadXMLdoc,"text/xml");
 	var statesize = xmlDoc.getElementsByTagName("state")[0].childNodes.length;
 	var coords = [];
   var state = document.getElementsByTagName("state")[0];

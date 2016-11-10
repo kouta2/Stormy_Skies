@@ -1,5 +1,5 @@
 <states>
-<state id = "stateId" name="Alaska" colour="#ff0000">
+<state id = "Alaska" colour="#ff0000">
 <point lat="70.0187" lng="-141.0205"></point>
 <point lat="70.1292" lng="-141.7291"></point>
 <point lat="70.4515" lng="-144.8163"></point>
@@ -87,7 +87,7 @@
 <point lat="60.3059" lng="-140.9999"></point>
 <point lat="70.0187" lng="-141.0205"></point>
 </state>
-<state id = "stateId" name="Alabama" colour="#ff0000">
+<state id = "Alabama" colour="#ff0000">
 <point lat="35.0041" lng="-88.1955"></point>
 <point lat="34.9918" lng="-85.6068"></point>
 <point lat="32.8404" lng="-85.1756"></point>
@@ -110,7 +110,7 @@
 <point lat="34.9479" lng="-88.1721"></point>
 <point lat="34.9107" lng="-88.1461"></point>
 </state>
-<state id = "stateId" name="Arkansas" colour="#ff0000">
+<state id = "Arkansas" colour="#ff0000">
 <point lat="33.0225" lng="-94.0416"></point>
 <point lat="33.0075" lng="-91.2057"></point>
 <point lat="33.1180" lng="-91.1989"></point>
@@ -170,7 +170,7 @@
 <point lat="33.4314" lng="-94.0430"></point>
 <point lat="33.0213" lng="-94.0430"></point>
 </state>
-<state id = "stateId" name="Arizona" colour="#ff0000">
+<state id = "Arizona" colour="#ff0000">
 <point lat="36.9993" lng="-112.5989"></point>
 <point lat="37.0004" lng="-110.8630"></point>
 <point lat="37.0004" lng="-109.0475"></point>
@@ -257,7 +257,7 @@
 <point lat="36.3638" lng="-114.0450"></point>
 <point lat="37.0001" lng="-114.0508"></point>
 </state>
-<state id = "stateId" name="California" colour="#880000">
+<state id = "California" colour="#880000">
 <point lat="41.9983" lng="-124.4009"></point>
 <point lat="42.0024" lng="-123.6237"></point>
 <point lat="42.0126" lng="-123.1526"></point>
@@ -370,14 +370,14 @@
 <point lat="41.7170" lng="-124.4545"></point>
 <point lat="41.9983" lng="-124.4009"></point>
 </state>
-<state id = "stateId" name="Colorado" colour="#880000">
+<state id = "Colorado" colour="#880000">
 <point lat="37.0004" lng="-109.0448"></point>
 <point lat="36.9949" lng="-102.0424"></point>
 <point lat="41.0006" lng="-102.0534"></point>
 <point lat="40.9996" lng="-109.0489"></point>
 <point lat="37.0004" lng="-109.0448"></point>
 </state>
-<state id = "stateId" name="Connecticut" colour="#880000">
+<state id = "Connecticut" colour="#880000">
 <point lat="42.0498" lng="-73.4875"></point>
 <point lat="42.0511" lng="-73.4247"></point>
 <point lat="42.0371" lng="-72.8146"></point>
@@ -411,7 +411,7 @@
 <point lat="41.4906" lng="-73.5329"></point>
 <point lat="42.0493" lng="-73.4875"></point>
 </state>
-<state id = "stateId" name="Delaware" colour="#880000">
+<state id = "Delaware" colour="#880000">
 <point lat="39.7188" lng="-75.7919"></point>
 <point lat="39.5210" lng="-75.7837"></point>
 <point lat="38.9081" lng="-75.7288"></point>
@@ -432,7 +432,7 @@
 <point lat="39.8296" lng="-75.6477"></point>
 <point lat="39.7199" lng="-75.7906"></point>
 </state>
-<state id = "stateId" name="Florida" colour="#8800ff">
+<state id = "Florida" colour="#8800ff">
 <point lat="30.9988" lng="-87.6050"></point>
 <point lat="30.9964" lng="-86.5613"></point>
 <point lat="31.0035" lng="-85.5313"></point>
@@ -521,7 +521,7 @@
 <point lat="30.9682" lng="-87.5912"></point>
 <point lat="30.9964" lng="-87.6050"></point>
 </state>
-<state id = "stateId" name="Georgia" colour="#880000">
+<state id = "Georgia" colour="#880000">
 <point lat="34.9974" lng="-85.6082"></point>
 <point lat="34.9906" lng="-84.7266"></point>
 <point lat="34.9895" lng="-84.1580"></point>
@@ -595,7 +595,7 @@
 <point lat="34.5620" lng="-85.5231"></point>
 <point lat="34.9929" lng="-85.6068"></point>
 </state>
-<state id = "stateId" name="Hawaii" colour="#00ff00">
+<state id = "Hawaii" colour="#00ff00">
 <point lat="19.5158" lng="-154.6284"></point>
 <point lat="19.8894" lng="-154.8235"></point>
 <point lat="20.1849" lng="-155.0391"></point>
@@ -627,7 +627,7 @@
 <point lat="19.2048" lng="-154.8839"></point>
 <point lat="19.5158" lng="-154.6271"></point>
 </state>
-<state id = "stateId" name="Iowa" colour="#00ff00">
+<state id = "Iowa" colour="#00ff00">
 <point lat="40.5848" lng="-95.7623"></point>
 <point lat="40.5785" lng="-93.5445"></point>
 <point lat="40.6129" lng="-91.7372"></point>
@@ -688,7 +688,7 @@
 <point lat="40.6775" lng="-95.8461"></point>
 <point lat="40.5837" lng="-95.7610"></point>
 </state>
-<state id = "stateId" name="Idaho" colour="#00ff00">
+<state id = "Idaho" colour="#00ff00">
 <point lat="49.0000" lng="-117.0319"></point>
 <point lat="49.0018" lng="-116.0486"></point>
 <point lat="47.9752" lng="-116.0445"></point>
@@ -813,7 +813,7 @@
 <point lat="46.9451" lng="-117.0394"></point>
 <point lat="48.9996" lng="-117.0319"></point>
 </state>
-<state id = "stateId" name="Illinois" colour="#00ffff">
+<state id = "Illinois" colour="#00ffff">
 <point lat="42.5116" lng="-90.6290"></point>
 <point lat="42.4924" lng="-87.0213"></point>
 <point lat="41.7641" lng="-87.2067"></point>
@@ -885,7 +885,7 @@
 <point lat="42.4032" lng="-90.5356"></point>
 <point lat="42.4843" lng="-90.6564"></point>
 </state>
-<state id = "stateId" name="Indiana" colour="#00ff00">
+<state id = "Indiana" colour="#00ff00">
 <point lat="41.7611" lng="-87.5253"></point>
 <point lat="41.7611" lng="-84.8090"></point>
 <point lat="39.0981" lng="-84.8199"></point>
@@ -972,7 +972,7 @@
 <point lat="39.3492" lng="-87.5336"></point>
 <point lat="41.7600" lng="-87.5253"></point>
 </state>
-<state id = "stateId" name="Kansas" colour="#008800">
+<state id = "Kansas" colour="#008800">
 <point lat="40.0034" lng="-102.0506"></point>
 <point lat="40.0034" lng="-102.0506"></point>
 <point lat="36.9927" lng="-102.0438"></point>
@@ -992,7 +992,7 @@
 <point lat="40.0087" lng="-95.3036"></point>
 <point lat="40.0024" lng="-102.0506"></point>
 </state>
-<state id = "stateId" name="Kentucky" colour="#008800">
+<state id = "Kentucky" colour="#008800">
 <point lat="36.4986" lng="-89.5372"></point>
 <point lat="36.5074" lng="-89.3010"></point>
 <point lat="36.5008" lng="-88.6871"></point>
@@ -1074,7 +1074,7 @@
 <point lat="36.6232" lng="-89.3518"></point>
 <point lat="36.4986" lng="-89.5345"></point>
 </state>
-<state id = "stateId" name="Louisiana" colour="#008800">
+<state id = "Louisiana" colour="#008800">
 <point lat="33.0225" lng="-94.0430"></point>
 <point lat="33.0179" lng="-93.0048"></point>
 <point lat="33.0087" lng="-91.1646"></point>
@@ -1185,7 +1185,7 @@
 <point lat="32.7041" lng="-94.0430"></point>
 <point lat="33.0225" lng="-94.0430"></point>
 </state>
-<state id = "stateId" name="Massachusetts" colour="#0000ff">
+<state id = "Massachusetts" colour="#0000ff">
 <point lat="42.0003" lng="-72.7789"></point>
 <point lat="42.0330" lng="-72.7405"></point>
 <point lat="42.0330" lng="-72.3779"></point>
@@ -1237,7 +1237,7 @@
 <point lat="41.9962" lng="-72.8160"></point>
 <point lat="42.0024" lng="-72.7803"></point>
 </state>
-<state id = "stateId" name="Maryland" colour="#0000ff">
+<state id = "Maryland" colour="#0000ff">
 <point lat="39.7220" lng="-79.4778"></point>
 <point lat="39.7220" lng="-78.3600"></point>
 <point lat="39.7220" lng="-75.7878"></point>
@@ -1349,7 +1349,7 @@
 <point lat="39.5316" lng="-79.4833"></point>
 <point lat="39.7214" lng="-79.4772"></point>
 </state>
-<state id = "stateId" name="Maine" colour="#0000ff">
+<state id = "Maine" colour="#0000ff">
 <point lat="45.3425" lng="-71.0129"></point>
 <point lat="45.3328" lng="-70.9525"></point>
 <point lat="45.2294" lng="-70.8618"></point>
@@ -1407,7 +1407,7 @@
 <point lat="43.5675" lng="-70.9717"></point>
 <point lat="45.3029" lng="-71.0829"></point>
 </state>
-<state id = "stateId" name="Michigan" colour="#FF0000">
+<state id = "Michigan" colour="#FF0000">
 <point lat="48.3033" lng="-88.3713"></point>
 <point lat="48.0101" lng="-87.6050"></point>
 <point lat="46.8902" lng="-84.8584"></point>
@@ -1525,7 +1525,7 @@
 <point lat="48.2448" lng="-88.6761"></point>
 <point lat="48.3042" lng="-88.3726"></point>
 </state>
-<state id = "stateId" name="Minnesota" colour="#0000ff">
+<state id = "Minnesota" colour="#0000ff">
 <point lat="43.5008" lng="-96.4517"></point>
 <point lat="43.5017" lng="-91.2195"></point>
 <point lat="43.8226" lng="-91.3101"></point>
@@ -1615,7 +1615,7 @@
 <point lat="45.2961" lng="-96.4558"></point>
 <point lat="43.5008" lng="-96.4531"></point>
 </state>
-<state id = "stateId" name="Missouri" colour="#000088">
+<state id = "Missouri" colour="#000088">
 <point lat="40.6181" lng="-91.7468"></point>
 <point lat="40.5597" lng="-91.6809"></point>
 <point lat="40.5472" lng="-91.6260"></point>
@@ -1682,7 +1682,7 @@
 <point lat="40.5962" lng="-92.5818"></point>
 <point lat="40.6140" lng="-91.7358"></point>
 </state>
-<state id = "stateId" name="Mississippi" colour="#000088">
+<state id = "Mississippi" colour="#000088">
 <point lat="35.0041" lng="-90.3049"></point>
 <point lat="35.0075" lng="-88.1955"></point>
 <point lat="34.8882" lng="-88.0994"></point>
@@ -1768,7 +1768,7 @@
 <point lat="34.8702" lng="-90.2911"></point>
 <point lat="35.0041" lng="-90.3062"></point>
 </state>
-<state id = "stateId" name="Montana" colour="#000088">
+<state id = "Montana" colour="#000088">
 <point lat="44.4750" lng="-111.0512"></point>
 <point lat="44.7311" lng="-111.3684"></point>
 <point lat="44.6198" lng="-111.5071"></point>
@@ -1827,7 +1827,7 @@
 <point lat="44.9959" lng="-111.0498"></point>
 <point lat="44.4750" lng="-111.0512"></point>
 </state>
-<state id = "stateId" name="North Carolina" colour="#ffff00">
+<state id = "North Carolina" colour="#ffff00">
 <point lat="33.7963" lng="-78.4850"></point>
 <point lat="34.8037" lng="-79.6742"></point>
 <point lat="34.8206" lng="-80.8003"></point>
@@ -1889,7 +1889,7 @@
 <point lat="33.7666" lng="-77.9260"></point>
 <point lat="33.7963" lng="-78.4863"></point>
 </state>
-<state id = "stateId" name="North Dakota" colour="#ffff00">
+<state id = "North Dakota" colour="#ffff00">
 <point lat="48.9955" lng="-104.0501"></point>
 <point lat="45.9445" lng="-104.0446"></point>
 <point lat="45.9340" lng="-96.5671"></point>
@@ -1914,7 +1914,7 @@
 <point lat="48.9982" lng="-97.2331"></point>
 <point lat="48.9946" lng="-104.0501"></point>
 </state>
-<state id = "stateId" name="Nebraska" colour="#ffff00">
+<state id = "Nebraska" colour="#ffff00">
 <point lat="42.9986" lng="-104.0543"></point>
 <point lat="41.0027" lng="-104.0543"></point>
 <point lat="41.0006" lng="-102.0506"></point>
@@ -1959,7 +1959,7 @@
 <point lat="42.9966" lng="-98.5020"></point>
 <point lat="43.0006" lng="-104.0543"></point>
 </state>
-<state id = "stateId" name="New Hampshire" colour="#00ffff">
+<state id = "New Hampshire" colour="#00ffff">
 <point lat="45.0153" lng="-71.5045"></point>
 <point lat="45.0532" lng="-71.4977"></point>
 <point lat="45.0910" lng="-71.4619"></point>
@@ -2068,7 +2068,7 @@
 <point lat="45.0017" lng="-71.5237"></point>
 <point lat="45.0163" lng="-71.5045"></point>
 </state>
-<state id = "stateId" name="New Jersey" colour="#ffff00">
+<state id = "New Jersey" colour="#ffff00">
 <point lat="41.3572" lng="-74.6950"></point>
 <point lat="41.3394" lng="-74.6559"></point>
 <point lat="40.9934" lng="-73.8940"></point>
@@ -2124,7 +2124,7 @@
 <point lat="41.3469" lng="-74.7249"></point>
 <point lat="41.3593" lng="-74.6960"></point>
 </state>
-<state id = "stateId" name="New Mexico" colour="#00ffff">
+<state id = "New Mexico" colour="#00ffff">
 <point lat="36.9971" lng="-109.0448"></point>
 <point lat="31.3337" lng="-109.0489"></point>
 <point lat="31.3349" lng="-108.2140"></point>
@@ -2135,7 +2135,7 @@
 <point lat="36.9982" lng="-103.0023"></point>
 <point lat="36.9982" lng="-109.0475"></point>
 </state>
-<state id = "stateId" name="Nevada" colour="#00ffff">
+<state id = "Nevada" colour="#00ffff">
 <point lat="41.9922" lng="-120.0037"></point>
 <point lat="42.0003" lng="-117.9602"></point>
 <point lat="42.0003" lng="-117.0264"></point>
@@ -2185,7 +2185,7 @@
 <point lat="39.0000" lng="-120.0009"></point>
 <point lat="41.9942" lng="-119.9982"></point>
 </state>
-<state id = "stateId" name="New York" colour="#00ffff">
+<state id = "New York" colour="#00ffff">
 <point lat="42.5142" lng="-79.7624"></point>
 <point lat="42.7783" lng="-79.0672"></point>
 <point lat="42.8508" lng="-78.9313"></point>
@@ -2313,7 +2313,7 @@
 <point lat="42.1827" lng="-79.7621"></point>
 <point lat="42.5146" lng="-79.7621"></point>
 </state>
-<state id = "stateId" name="Ohio" colour="#ff8800">
+<state id = "Ohio" colour="#ff8800">
 <point lat="38.4385" lng="-82.3425"></point>
 <point lat="38.5707" lng="-82.2917"></point>
 <point lat="38.5965" lng="-82.1722"></point>
@@ -2357,7 +2357,7 @@
 <point lat="38.5782" lng="-82.8355"></point>
 <point lat="38.3761" lng="-82.5952"></point>
 </state>
-<state id = "stateId" name="Oklahoma" colour="#ff00ff">
+<state id = "Oklahoma" colour="#ff00ff">
 <point lat="37.0015" lng="-103.0051"></point>
 <point lat="36.5030" lng="-103.0037"></point>
 <point lat="36.4986" lng="-100.0003"></point>
@@ -2406,7 +2406,7 @@
 <point lat="36.9982" lng="-94.6211"></point>
 <point lat="37.0004" lng="-103.0064"></point>
 </state>
-<state id = "stateId" name="Oregon" colour="#ff00ff">
+<state id = "Oregon" colour="#ff00ff">
 <point lat="46.2587" lng="-124.2444"></point>
 <point lat="46.2634" lng="-124.0384"></point>
 <point lat="46.2891" lng="-124.0205"></point>
@@ -2533,7 +2533,7 @@
 <point lat="46.0065" lng="-124.2554"></point>
 <point lat="46.2587" lng="-124.2444"></point>
 </state>
-<state id = "stateId" name="Pennsylvania" colour="#ff00ff">
+<state id = "Pennsylvania" colour="#ff00ff">
 <point lat="42.3261" lng="-80.5174"></point>
 <point lat="42.3961" lng="-80.0821"></point>
 <point lat="42.5167" lng="-79.7621"></point>
@@ -2567,7 +2567,7 @@
 <point lat="39.7220" lng="-80.5243"></point>
 <point lat="42.3240" lng="-80.5202"></point>
 </state>
-<state id = "stateId" name="Rhode Island" colour="#ffff00">
+<state id = "Rhode Island" colour="#ffff00">
 <point lat="41.3706" lng="-71.0568"></point>
 <point lat="41.3706" lng="-71.0541"></point>
 <point lat="41.6339" lng="-71.1447"></point>
@@ -2589,7 +2589,7 @@
 <point lat="41.1849" lng="-71.7915"></point>
 <point lat="41.2665" lng="-71.4084"></point>
 </state>
-<state id = "stateId" name="South Carolina" colour="#ff8800">
+<state id = "South Carolina" colour="#ff8800">
 <point lat="32.0488" lng="-80.7001"></point>
 <point lat="32.0453" lng="-80.8978"></point>
 <point lat="32.1105" lng="-81.1134"></point>
@@ -2643,7 +2643,7 @@
 <point lat="32.2012" lng="-80.4240"></point>
 <point lat="32.0500" lng="-80.7001"></point>
 </state>
-<state id = "stateId" name="South Dakota" colour="#ff8800">
+<state id = "South Dakota" colour="#ff8800">
 <point lat="45.9435" lng="-104.0501"></point>
 <point lat="43.0026" lng="-104.0529"></point>
 <point lat="42.9946" lng="-98.4993"></point>
@@ -2671,7 +2671,7 @@
 <point lat="45.9311" lng="-96.5643"></point>
 <point lat="45.9416" lng="-104.0501"></point>
 </state>
-<state id = "stateId" name="Tennessee" colour="#ff8800">
+<state id = "Tennessee" colour="#ff8800">
 <point lat="36.6739" lng="-88.0678"></point>
 <point lat="36.6354" lng="-87.8522"></point>
 <point lat="36.6023" lng="-83.6787"></point>
@@ -2730,7 +2730,7 @@
 <point lat="36.4997" lng="-88.0692"></point>
 <point lat="36.6871" lng="-88.0637"></point>
 </state>
-<state id = "stateId" name="Texas" colour="#00ff88">
+<state id = "Texas" colour="#00ff88">
 <point lat="31.8659" lng="-106.5715"></point>
 <point lat="31.7504" lng="-106.5042"></point>
 <point lat="31.6242" lng="-106.3092"></point>
@@ -2903,7 +2903,7 @@
 <point lat="32.0011" lng="-103.0655"></point>
 <point lat="32.0023" lng="-106.6168"></point>
 </state>
-<state id = "stateId" name="Utah" colour="#00ff88">
+<state id = "Utah" colour="#00ff88">
 <point lat="36.9982" lng="-114.0491"></point>
 <point lat="37.0026" lng="-109.0462"></point>
 <point lat="40.9986" lng="-109.0503"></point>
@@ -2912,7 +2912,7 @@
 <point lat="41.9901" lng="-114.0395"></point>
 <point lat="37.0015" lng="-114.0504"></point>
 </state>
-<state id = "stateId" name="Virginia" colour="#00ff88">
+<state id = "Virginia" colour="#00ff88">
 <point lat="36.6017" lng="-83.6753"></point>
 <point lat="36.6519" lng="-83.5613"></point>
 <point lat="36.6673" lng="-83.4432"></point>
@@ -3066,7 +3066,7 @@
 <point lat="36.5957" lng="-83.2654"></point>
 <point lat="36.6023" lng="-83.6746"></point>
 </state>
-<state id = "stateId" name="Vermont" colour="#88ff00">
+<state id = "Vermont" colour="#88ff00">
 <point lat="45.0104" lng="-73.3427"></point>
 <point lat="45.0134" lng="-73.1827"></point>
 <point lat="45.0153" lng="-72.7432"></point>
@@ -3174,7 +3174,7 @@
 <point lat="45.0109" lng="-73.3447"></point>
 <point lat="45.0104" lng="-73.3426"></point>
 </state>
-<state id = "stateId" name="Washington" colour="#88ff00">
+<state id = "Washington" colour="#88ff00">
 <point lat="49.0023" lng="-123.3208"></point>
 <point lat="49.0027" lng="-123.0338"></point>
 <point lat="49.0018" lng="-122.0650"></point>
@@ -3299,7 +3299,7 @@
 <point lat="48.8313" lng="-123.0084"></point>
 <point lat="49.0023" lng="-123.3215"></point>
 </state>
-<state id = "stateId" name="Wisconsin" colour="#0088ff">
+<state id = "Wisconsin" colour="#0088ff">
 <point lat="42.5116" lng="-90.6303"></point>
 <point lat="42.4954" lng="-87.0241"></point>
 <point lat="43.3721" lng="-87.1477"></point>
@@ -3366,7 +3366,7 @@
 <point lat="42.6340" lng="-90.7031"></point>
 <point lat="42.5096" lng="-90.6303"></point>
 </state>
-<state id = "stateId" name="West Virginia" colour="#0088ff">
+<state id = "West Virginia" colour="#0088ff">
 <point lat="39.7188" lng="-79.4765"></point>
 <point lat="39.2057" lng="-79.4806"></point>
 <point lat="39.4871" lng="-79.0576"></point>
@@ -3463,7 +3463,7 @@
 <point lat="39.7241" lng="-80.5174"></point>
 <point lat="39.7209" lng="-79.4778"></point>
 </state>
-<state id = "stateId" name="Wyoming" colour="#ff0088">
+<state id = "Wyoming" colour="#ff0088">
 <point lat="41.0037" lng="-104.0556"></point>
 <point lat="44.9949" lng="-104.0584"></point>
 <point lat="44.9998" lng="-111.0539"></point>

@@ -12,7 +12,7 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Stormy Skies Stage 4</title> 
+	    <title>Stormy Skies</title> 
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
@@ -34,7 +34,7 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a href="../queries/query.php" class = "active" >Queries</a></li>
+		        <li><a href="../queries/query_date.php" class = "active" >Queries</a></li>
 		        <li><a href="../predictions/predictions.php">Predictions</a></li>
 		        <li><a href="../map/map.php">Map</a></li>
 		        
@@ -68,21 +68,21 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Station</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input id="Station" type="text" class="form-control" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Station Name</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input id="Station Name" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Date</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="mm/dd/yyyy">
+					 	<input id="Date" type="text" class="form-control" id="basic-url" placeholder="mm/dd/yyyy">
 					</div>
 				</div>
 				
@@ -90,7 +90,7 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Min Temp</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="in F°">
+					 	<input id="Min Temp" type="text" class="form-control" id="basic-url" placeholder="in F°">
 					</div>
 				</div>
 
@@ -98,7 +98,7 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Max Temp</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="in F°">
+					 	<input id="Max Temp" type="text" class="form-control" id="basic-url" placeholder="in F°">
 					</div>
 				</div>
 
@@ -107,47 +107,79 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Rain</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="in.">
+					 	<input id="Rain" type="text" class="form-control" id="basic-url" placeholder="in.">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Snowfall</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="in.">
+					 	<input id="Snowfall" type="text" class="form-control" id="basic-url" placeholder="in.">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Latitude</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input id="Latitude" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Longitude</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input id="Longitude" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Elevation</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="meters">
+					 	<input id="Elevation" type="text" class="form-control" id="basic-url" placeholder="meters">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
-					<button type="button" class="btn btn-success">Submit</button>					
+					<button onclick="readInputs()" type="button" class="btn btn-success">Submit</button>
 				</div>
-
 
 			</div>
 		</div> <!--close query body-->
-
 		
+		<p id = "results">
+		
+		</p>
+
+		<script>
+		function readInputs() {
+			var text = ""
+			
+			var x = document.getElementById("Station");
+    			var station = x.value;
+			x = document.getElementById("Station Name");
+    			var station_name = x.value;
+			x = document.getElementById("Date");
+    			var dat = x.value;
+			x = document.getElementById("Min Temp");
+    			var min_temp = x.value;
+			x = document.getElementById("Max Temp");
+    			var max_temp = x.value;
+			x = document.getElementById("Rain");
+    			var rain = x.value;
+			x = document.getElementById("Snowfall");
+    			var snowfall = x.value;
+			x = document.getElementById("Latitude");
+    			var lat = x.value;
+			x = document.getElementById("Longitude");
+    			var lon = x.value;
+			x = document.getElementById("Elevation");
+    			var elevation = x.value;
+			
+			text = station + ", " + station_name + ", ";
+    			document.getElementById("results").innerHTML = text;
+		}
+		</script>	
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
