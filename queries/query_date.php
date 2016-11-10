@@ -65,21 +65,19 @@
 			</ul>
 
 			<div class = "row insert_criteria">
-
-				
 			
+			<form id= "date_form" action="queryByDate.php" method="post">	
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Date</span>
-					 	<input type="text" class="form-control" id="date" placeholder="mm/dd/yyyy">
+					 	<input type="text" class="form-control" name="date" placeholder="mm/dd/yyyy">
 					</div>
 				</div>
-
 
 				<div class = "col-md-1">
 					<div class="checkbox">
 					   	<label>
-					   		<input type="checkbox" id = "tornadoes"> Tornadoes
+					   		<input type="checkbox" name = "tornadoes"> Tornadoes
 					   	</label>
 					</div>
 				</div>
@@ -87,7 +85,7 @@
 				<div class = "col-md-1">
 					<div class="checkbox">
 					   	<label>
-					   		<input type="checkbox" id = "hurricanes"> Hurricanes
+					   		<input type="checkbox" name = "hurricanes"> Hurricanes
 					   	</label>
 					</div>
 				</div>
@@ -95,7 +93,7 @@
 				<div class = "col-md-1">
 					<div class="checkbox">
 					   	<label>
-					   		<input type="checkbox" id = "earthquakes"> Earthquakes   
+					   		<input type="checkbox" name = "earthquakes"> Earthquakes   
 					   	</label>
 					</div>
 				</div>
@@ -103,7 +101,7 @@
 				<div class = "col-md-1">
 					<div class="checkbox">
 					   	<label>
-					   		<input type="checkbox" id = "fires"> Fires
+					   		<input type="checkbox" name = "fires"> Fires
 					   	</label>
 					</div>
 				</div>
@@ -111,19 +109,16 @@
 				<div class = "col-md-2">
 					<div class="checkbox">
 					   	<label>
-					   		<input type="checkbox" id = "daily"> Daily Weather
+					   		<input type="checkbox" name = "daily"> Daily Weather
 					   	</label>
 					</div>
 				</div>
-
-
-				
 
 				<div class = "col-md-1">
 					<button type="button" class="btn btn-success">Search</button>					
 				</div>
 
-
+			</form>
 			</div>
 		</div> <!--close query body-->
 
