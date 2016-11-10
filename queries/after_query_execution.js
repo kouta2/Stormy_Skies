@@ -1,16 +1,16 @@
 $("#sub").click( function() {
-        var data = $("#insertForm :input").serializeArray(); // myForm is from test_inputs.php. We get its inputs.
+        var data = $("#date_form :input").serializeArray(); // myForm is from test_inputs.php. We get its inputs.
 
-        $.post( $("#insertForm").attr("action"), data, function(info) {$("#result").html(info); } ); // info is the output of userInfo.php
+        $.post( $("#date_form").attr("action"), data, function(info) {$("#result").html(info); } ); // info is the output of userInfo.php
         clearInputAfterSubmit();
 });
 
-$("#insertForm").submit( function() {
+$("#date_form").submit( function() {
   return false;
 });
 
 function clearInputAfterSubmit() {
-        $("#insertForm :input").each( function() {
+        $("#date_form :input").each( function() {
                 $(this).val('');
         });
 }
