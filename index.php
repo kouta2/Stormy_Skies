@@ -35,7 +35,7 @@
 		        
 
 		        <li><a href="queries/query_date.php" class = "active" >Queries</a></li>
-		        <li><a href="shw_map.php">Predictions</a></li>
+		        <li><a href="predictions/predictions.php">Predictions</a></li>
 		        <li><a href="map/map.php">Map</a></li>
 		        
 		      </ul>

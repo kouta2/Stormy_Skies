@@ -63,26 +63,27 @@
 			  	<li role="presentation"><a href="insert_volcano.php">Volcanos</a></li>
 			</ul>
 
+			<form id="myForm" action="daily_weather_info.php" method="post">
 			<div class = "row insert_criteria">
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Station</span>
-					 	<input id="Station" type="text" class="form-control" placeholder="">
+					 	<input name="Station" id="Station" type="text" class="form-control" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Station Name</span>
-					 	<input id="Station Name" type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input name="Station Name" id="Station Name" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Date</span>
-					 	<input id="Date" type="text" class="form-control" id="basic-url" placeholder="mm/dd/yyyy">
+					 	<input name="Date" id="Date" type="text" class="form-control" id="basic-url" placeholder="mm/dd/yyyy">
 					</div>
 				</div>
 				
@@ -90,7 +91,7 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Min Temp</span>
-					 	<input id="Min Temp" type="text" class="form-control" id="basic-url" placeholder="in F°">
+					 	<input name="Min Temp" id="Min Temp" type="text" class="form-control" id="basic-url" placeholder="in F°">
 					</div>
 				</div>
 
@@ -98,7 +99,7 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Max Temp</span>
-					 	<input id="Max Temp" type="text" class="form-control" id="basic-url" placeholder="in F°">
+					 	<input name="Max Temp" id="Max Temp" type="text" class="form-control" id="basic-url" placeholder="in F°">
 					</div>
 				</div>
 
@@ -107,43 +108,44 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Rain</span>
-					 	<input id="Rain" type="text" class="form-control" id="basic-url" placeholder="in.">
+					 	<input name="Rain" id="Rain" type="text" class="form-control" id="basic-url" placeholder="in.">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Snowfall</span>
-					 	<input id="Snowfall" type="text" class="form-control" id="basic-url" placeholder="in.">
+					 	<input name="Snowfall" id="Snowfall" type="text" class="form-control" id="basic-url" placeholder="in.">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Latitude</span>
-					 	<input id="Latitude" type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input name="Latitude" id="Latitude" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Longitude</span>
-					 	<input id="Longitude" type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input name="Longitude" id="Longitude" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Elevation</span>
-					 	<input id="Elevation" type="text" class="form-control" id="basic-url" placeholder="meters">
+					 	<input name="Elevation" id="Elevation" type="text" class="form-control" id="basic-url" placeholder="meters">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
-					<button onclick="readInputs()" type="button" class="btn btn-success">Submit</button>
+					<button id="sub_daily" onclick="readInputs()" type="button" class="btn btn-success">Submit</button>
 				</div>
 
 			</div>
+			</form>
 		</div> <!--close query body-->
 		
 		<p id = "results">

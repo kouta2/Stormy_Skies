@@ -17,6 +17,6 @@ Area : <input type="text" name="area" /><br />
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../js/bootstrap.min.js"></script>
-
+<script src="test_script.js" type="text/javascript"></script>
 </body>
 </html>

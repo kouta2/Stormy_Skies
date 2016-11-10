@@ -74,7 +74,7 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">States Affected</span>
-					 	<input "States Affected" type="text" class="form-control" id="basic-url" placeholder="comma separated list">
+					 	<input id="States Affected" type="text" class="form-control" id="basic-url" placeholder="comma separated list">
 					</div>
 				</div>
 

@@ -12,7 +12,7 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Stormy Skies Stage 4</title> 
+	    <title>Stormy Skies</title> 
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
@@ -24,7 +24,7 @@
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
-		        <a class="navbar-brand" href="index.php"> 
+		        <a class="navbar-brand" href="../index.php"> 
 		        	<img src="../img/bolt.png"  width=32 height=32>
 		        </a>
 		    </div>
@@ -34,10 +34,9 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a href="queries/query_date.php" class = "active" >Queries</a></li>
-		        <li><a href="arv_map.php">Minor Weather</a></li>
-		        <li><a href="shw_map.php">Predictions</a></li>
-		        <li><a href="map/map.php">Map</a></li>
+		        <li><a href="../queries/query_date.php" class = "active" >Queries</a></li>
+		        <li><a href="#">Predictions</a></li>
+		        <li><a href="../map/map.php">Map</a></li>
 		        
 		      </ul>
 
@@ -58,10 +57,21 @@
 
 		<div class="query_body">
 
-			<div class = "row insert_criteria"
-				<div class = "col-md-4">
-					<h4>Enter Date:</h4>
+			<div class = "row insert_criteria">
+
+				<div class = "col-md-3"></div>
+
+				<div class = "col-md-4">				
+					<div class="input-group">
+				  		<span class="input-group-addon">Insert Date for Prediction</span>
+				 			<input id="Date" type="text" class="form-control" id="date" placeholder="mm/dd/yyyy">
+					</div>
 				</div>
+
+				<div class = "col-md-2">
+					<button onclick="readInputs()" type="button" class="btn btn-success">Submit</button>					
+				</div>
+
 			</div>
 
 			

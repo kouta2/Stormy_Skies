@@ -6,7 +6,7 @@
 	$name = $_POST['name'];
 	$area = $_POST['area'];
 
-	$sql = "INSERT INTO fires VALUES ('$data', $size, '$name', '$area')";
+	$sql = "INSERT INTO fires VALUES ('$date', $size, '$name', '$area')";
 
 	if(mysqli_query($link, $sql))  // mysql_query("INSERT INTO fires VALUES ('$data', $size, '$name', '$area')"))
 		echo "success!";

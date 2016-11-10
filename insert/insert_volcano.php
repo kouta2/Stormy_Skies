@@ -67,41 +67,62 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Name</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input id="Name" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Height</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="ft.">
+					 	<input id="Height" type="text" class="form-control" id="basic-url" placeholder="ft.">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Last Eruption</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="yyyy">
+					 	<input id="Last Eruption" type="text" class="form-control" id="basic-url" placeholder="yyyy">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Location</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="state">
+					 	<input id="Location" type="text" class="form-control" id="basic-url" placeholder="state">
 					</div>
 				</div>
 
 
 
 				<div class = "col-md-2">
-					<button type="button" class="btn btn-success">Submit</button>					
+					<button id="sub_volcanos" onclick="readInputs()" type="button" class="btn btn-success">Submit</button>					
 				</div>
-
+				</form>
 
 			</div>
 		</div> <!--close query body-->
 
+                <p id = "results">
+
+                </p>
+
+                <script>
+                function readInputs() {
+                        var text = ""
+
+                        var x = document.getElementById("Name");
+                        var name = x.value;
+                        x = document.getElementById("Height");
+                        var height = x.value;
+                        x = document.getElementById("Last Eruption");
+                        var last_eruption = x.value;
+                        x = document.getElementById("Location");
+                        var loc = x.value;
+
+                        text = loc + ", " + name + ", " + height;
+                        document.getElementById("results").innerHTML = text;
+                }
+                </script>
 		
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
