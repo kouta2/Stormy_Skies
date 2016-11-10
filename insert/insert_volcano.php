@@ -62,33 +62,33 @@
 			  	<li role="presentation" class="active"><a href="insert_volcano.php">Volcanos</a></li>
 			</ul>
 
-			
+			<form id="myForm_volcanos action="volcano_info.php method="post">	
 			<div class = "row insert_criteria">
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Name</span>
-					 	<input id="Name" type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input name="Name" id="Name" type="text" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Height</span>
-					 	<input id="Height" type="text" class="form-control" id="basic-url" placeholder="ft.">
+					 	<input name="Height" id="Height" type="text" class="form-control" id="basic-url" placeholder="ft.">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Last Eruption</span>
-					 	<input id="Last Eruption" type="text" class="form-control" id="basic-url" placeholder="yyyy">
+					 	<input name="Last Eruption" id="Last Eruption" type="text" class="form-control" id="basic-url" placeholder="yyyy">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Location</span>
-					 	<input id="Location" type="text" class="form-control" id="basic-url" placeholder="state">
+					 	<input name="Location" id="Location" type="text" class="form-control" id="basic-url" placeholder="state">
 					</div>
 				</div>
 
@@ -129,6 +129,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="volcano_script.js" type="text/javascript"</script>
   </body>
   	<!-- closing db connection -->
     <?php

@@ -134,8 +134,49 @@
 
         google.maps.event.addDomListener(window, 'load', initMap);
     </script>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="../css/styles.css" rel = "stylesheet">  
   </head>
-  <body>
-    <div id="map"></div>
-  </body>
+  	<body>
+  		<nav class="navbar navbar-default navbar-custom">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		        <a class="navbar-brand" href="../index.php"> 
+		        	<img src="../img/bolt.png"  width=32 height=32>
+		        </a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        
+
+		        <li><a href="../queries/query_date.php" class = "active" >Queries</a></li>
+		        <li><a href="#">Predictions</a></li>
+		        <li><a href="../map/map.php">Map</a></li>
+		        
+		      </ul>
+
+		     
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		      	<li>
+		      	  	<p class="navbar-btn">
+                    	<a href="insert/insert_daily.php" class="btn btn-success">Add Data</a>
+                	</p>
+                </li>
+		        
+		      </ul>
+
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav> 	
+
+		<div class = "row">
+			<div id="map"></div>
+		</div>
+
+  	</body>
 </html>

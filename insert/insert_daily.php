@@ -63,7 +63,7 @@
 			  	<li role="presentation"><a href="insert_volcano.php">Volcanos</a></li>
 			</ul>
 
-			<form id="myForm" action="daily_weather_info.php" method="post">
+			<form id="myForm" action="daily_info.php" method="post">
 			<div class = "row insert_criteria">
 
 				<div class = "col-md-2">
