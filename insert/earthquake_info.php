@@ -1,11 +1,11 @@
 <?php
 	include_once("db.php");
-	$name = $_POST['Name'];
-	$height = $_POST['Height'];
-	$last_eruption = $_POST['Last_Eruption'];
-	$location = $_POST['Location'];
+	$date = $_POST['Date'];
+	$states_affected = $_POST["States_Affected"];
+	$magnitude = $_POST['Magnitude'];
+	$fatalities = $_POST['Fatalities'];
 
-	$sql = "INSERT INTO volcanoes VALUES ('$name', '$height', '$last_eruption','$location')";
+	$sql = "INSERT INTO earthquakes VALUES ('$date','$states_affected','$magnitude','$fatalities')";
 
 	if(mysqli_query($link, $sql))  // mysql_query("INSERT INTO fires VALUES ('$data', $size, '$name', '$area')"))
                 echo "success!";

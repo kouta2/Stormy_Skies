@@ -85,7 +85,10 @@
 				</div>			
 
 				<div class = "col-md-1">
-					<button type="button" class="btn btn-success" id = "search_earthquakes">Search Earthquakes</button>					
+					<div style ="margin: 0 auto;width: 50%;">
+						<button type="button" class="btn btn-success" id = "search_earthquakes">Search Earthquakes</button>	
+					</div>
+
 				</div>
 			</div>
 
@@ -111,7 +114,9 @@
 				</div>			
 
 				<div class = "col-md-1">
-					<button type="button" class="btn btn-success" id = "search_hurricanes">Search Hurricanes</button>					
+					<div style ="margin: 0 auto;width:50%;">
+						<button type="button" class="btn btn-success" id = "search_hurricanes">Search Hurricanes</button>	
+					</div>				
 				</div>
 			</div>
 
@@ -137,7 +142,9 @@
 				</div>			
 
 				<div class = "col-md-1">
-					<button type="button" class="btn btn-success" id = "search_tornadoes">Search Tornadoes</button>					
+					<div style ="margin: 0 auto;width: 50%;">
+						<button type="button" class="btn btn-success" id = "search_tornadoes">Search Tornadoes</button>	
+					</div>				
 				</div>
 			</div>
 
@@ -163,7 +170,9 @@
 				</div>			
 
 				<div class = "col-md-1">
-					<button type="button" class="btn btn-success" id = "search_fires">Search Fires</button>					
+					<div style ="margin: 0 auto;width:50%;">					
+						<button type="button" class="btn btn-success" id = "search_fires">Search Fires</button>	
+					</div>				
 				</div>
 			</div>
 

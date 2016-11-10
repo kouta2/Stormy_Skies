@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">  
-    <!--initial connection script -->
-    <?php    	
-
-    	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");		
-	?>   
-    
   	<head>
 
 	    <meta charset="utf-8">
@@ -62,51 +56,50 @@
 			  	<li role="presentation" class="active"><a href="insert_volcano.php">Volcanos</a></li>
 			</ul>
 
-			<form id="myForm_volcanos action="volcano_info.php method="post">	
+			<form id="insertForm" action="volcano_info.php" method="post">	
 			<div class = "row insert_criteria">
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Name</span>
-					 	<input name="Name" id="Name" type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input type="text" class="form-control" placeholder="" name="Name">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Height</span>
-					 	<input name="Height" id="Height" type="text" class="form-control" id="basic-url" placeholder="ft.">
+					 	<input type="text" class="form-control" placeholder="ft." name="Height">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Last Eruption</span>
-					 	<input name="Last Eruption" id="Last Eruption" type="text" class="form-control" id="basic-url" placeholder="yyyy">
+					 	<input type="text" class="form-control" placeholder="yyyy" name="Last_Eruption">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Location</span>
-					 	<input name="Location" id="Location" type="text" class="form-control" id="basic-url" placeholder="state">
+					 	<input type="text" class="form-control" placeholder="state" name="Location">
 					</div>
 				</div>
 
 
 
 				<div class = "col-md-2">
-					<button id="sub_volcanos" onclick="readInputs()" type="button" class="btn btn-success">Submit</button>					
+					<button id="sub" type="button" class="btn btn-success">Submit</button>
+					<!--button id="sub_volcanos">Save</button-->
 				</div>
-				</form>
 
 			</div>
+			</form>
 		</div> <!--close query body-->
 
-                <p id = "results">
+                <span id="result"></span>
 
-                </p>
-
-                <script>
+                <!--script>
                 function readInputs() {
                         var text = ""
 
@@ -120,20 +113,15 @@
                         var loc = x.value;
 
                         text = loc + ", " + name + ", " + height;
-                        document.getElementById("results").innerHTML = text;
+                        document.getElementById("result").innerHTML = text;
                 }
-                </script>
+                </script-->
 		
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="volcano_script.js" type="text/javascript"</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="handle_after_submit.js" type="text/javascript"></script>
   </body>
-  	<!-- closing db connection -->
-    <?php
-
-        mysqli_close($link);
-    ?>
 </html>

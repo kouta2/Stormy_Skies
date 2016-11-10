@@ -1,28 +1,43 @@
 <?php
-	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");	
+	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");
 	$date = $_POST["date"];
-	$tornadoes = $_POST["tornadoes"];
-	$hurricanes = $_POST["hurricanes"];
-	$earthquakes = $_POST["earthquakes"];
-	$fires = $_POST["fires"];
-	$daily = $_POST["daily"];
-	for($_POST as $key=>$val)
-	{
-		if(isSet())
+	$t = $_POST["tornadoes"];
+	$h = $_POST["hurricanes"];
+	$e = $_POST["earthquakes"];
+	$f = $_POST["fires"];
+	$d = $_POST["daily"];
+
+	$str ='';
+	$first = TRUE;
+	$prev = '';
+	$top = '';
+	foreach($_POST as $key => $value){
+		if($key!='date'){
+			if($value == 'on'){
+				if($first===FALSE){
+					$str.='INNER JOIN ';
+					$str.=($key . ' ON '.$key.'.Date='.$prev.'.Date ');		
+					$prev = $key;
+				}
+				else{
+					$str.=($key.' ');
+					$prev = $key;
+					$first = FALSE;
+					$top = $key;	
+				}
+			}
+		}
 	}
-
-
-	$sql = "SELECT * FROM tornadoes ";
+	$sql = "SELECT * FROM ".$str."WHERE ".$top.'.Date = "'.$date.'"';
 	$res = mysqli_query($link, $sql);
-	$result = array();
-	while($row = mysqli_fetch_array($res))
-	{
-		array_push($result, array('Date'=>$row[0],
-								  'Fatalities' => $row[1]
-								  'Name' => $row[2]
-								  'Region'=>$row[3]
-								  'Tornadoes'=>$row[4]));
+	echo "<table>";
+	while($row = mysqli_fetch_array($res)){
+		echo "<tr>";
+		foreach($row as $key => $value){
+			echo "<td>".$value."</td>";
+		}
+			echo "</tr>";	
 	}
-	echo json_encode(array("result"=>$result));
-	//mysqli_close($link);
+	echo "</table>";
+	mysqli_close($link);
 ?>

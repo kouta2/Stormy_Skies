@@ -55,7 +55,9 @@
 		  </div><!-- /.container-fluid -->
 		</nav> 	
 
-		<p><a href = "insert/test_insert.php">TEST INSERT </a> </p>
+		<div class = "jumbotron">
+
+		</div>
 
 
     

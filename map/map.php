@@ -7,15 +7,7 @@
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+ 
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwvDeUmfCVgrrUyU29pb_kWzjW600k3Ac"></script>
     <script>
@@ -36,8 +28,8 @@
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: {lat: 22, lng: -70.109291},
+          zoom: 4,
+          center: {lat: 39, lng: -98},
         });
 
       function loadXMLDoc() {
@@ -174,9 +166,16 @@
 		  </div><!-- /.container-fluid -->
 		</nav> 	
 
-		<div class = "row">
-			<div id="map"></div>
-		</div>
+			<div class = "row">
+				<div class = "col-md-2"></div>
+
+				<div class = "col-md-8">
+					<div id="map" style="height:600px;"></div>
+				</div>
+
+				<div class = "col-md-2"></div>
+
+			</div>
 
   	</body>
 </html>

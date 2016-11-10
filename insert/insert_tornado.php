@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">  
-    <!--initial connection script -->
-    <?php    	
-
-    	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");		
-	?>   
-    
   	<head>
 
 	    <meta charset="utf-8">
@@ -61,83 +55,58 @@
 			  	<li role="presentation"><a href="insert_fire.php">Fires</a></li>
 			  	<li role="presentation"><a href="insert_volcano.php">Volcanos</a></li>
 			</ul>
-
+			<form id="insertForm" action="tornado_info.php" method="post">
 			<div class = "row insert_criteria">
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Name</span>
-					 	<input id="Name" type="text" class="form-control" id="basic-url" >
+					 	<input name="Name" id="Name" type="text" class="form-control" >
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Date</span>
-					 	<input id="Date" type="text" class="form-control" id="basic-url" placeholder="mm/dd/yyyy">
+					 	<input name="Date" id="Date" type="text" class="form-control" placeholder="mm/dd/yyyy">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">States Affected</span>
-					 	<input id="States Affected" type="text" class="form-control" id="basic-url" placeholder="comma separated list">
+					 	<input name="States_Affected" id="States Affected" type="text" class="form-control" placeholder="comma separated list">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
-					  	<span class="input-group-addon"># of tornados</span>
-					 	<input id="# of tornados" type="text" class="form-control" id="basic-url" placeholder="">
+					  	<span class="input-group-addon"># of tornadoes</span>
+					 	<input name="#_of_tornadoes" id="# of tornadoes" type="text" class="form-control" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Fatalities</span>
-					 	<input id="Fatalities" type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input name="Fatalities" id="Fatalities" type="text" class="form-control" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
-					<button onclick="readInputs()" type="button" class="btn btn-success">Submit</button>					
+					<button id="sub" type="button" class="btn btn-success">Submit</button>					
 				</div>
 
 
 			</div>
+			</form>
 		</div> <!--close query body-->
 
-                <p id = "results">
-
-                </p>
-
-                <script>
-                function readInputs() {
-                        var text = ""
-
-                        var x = document.getElementById("Name");
-                        var name = x.value;
-                        x = document.getElementById("Date");
-                        var dat = x.value;
-                        x = document.getElementById("States Affected");
-                        var states_affected = x.value;
-                        x = document.getElementById("# of tornados");
-                        var num_tornados = x.value;
-                        x = document.getElementById("Fatalities");
-                        var fatalities = x.value;
-
-                        text = dat + ", " + states_affected;
-                        document.getElementById("results").innerHTML = text;
-                }
-                </script>		
+                <span id = "result"></span>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="handle_after_submit.js" type="text/javascript"></script>
   </body>
-  	<!-- closing db connection -->
-    <?php
-
-        mysqli_close($link);
-    ?>
 </html>

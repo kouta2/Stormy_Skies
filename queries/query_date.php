@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">  
-    <!--initial connection script -->
-    <?php    	
-
-    	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");		
-	?>   
-    
   	<head>
 
 	    <meta charset="utf-8">
@@ -64,9 +58,9 @@
 			  	<li role="presentation"><a href="query_rating.php">Rating</a></li>
 			</ul>
 
+			<form id= "date_form" action="queryByDate.php" method="post">	
 			<div class = "row insert_criteria">
 			
-			<form id= "date_form" action="queryByDate.php" method="post">	
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Date</span>
@@ -109,29 +103,25 @@
 				<div class = "col-md-2">
 					<div class="checkbox">
 					   	<label>
-					   		<input type="checkbox" name = "daily"> Daily Weather
+					   		<input type="checkbox" name = "daily_data"> Daily Weather
 					   	</label>
 					</div>
 				</div>
 
 				<div class = "col-md-1">
-					<button type="button" class="btn btn-success">Search</button>					
+					<button id="sub" type="button" class="btn btn-success">Submit</button>		
+				<!--<button id = "sub">Search</button>-->
 				</div>
 
-			</form>
 			</div>
+			</form>
 		</div> <!--close query body-->
 
-		
+	<span id="result"></span>		
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
   </body>
-  	<!-- closing db connection -->
-    <?php
-
-        mysqli_close($link);
-    ?>
 </html>
