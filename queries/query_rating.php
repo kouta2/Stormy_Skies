@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">  
-    <!--initial connection script -->
-    <?php    	
-
-    	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");		
-	?>   
-    
+<html lang="en">     
   	<head>
 
 	    <meta charset="utf-8">
@@ -62,9 +56,9 @@
 			  	<li role="presentation"><a href="query_fatalities.php">Fatalities</a></li>
 			  	<li role="presentation" class ="active"><a href="query_rating.php">Rating</a></li>
 			</ul>
-
+			
+			<form id="richter_form" action="earthquakeRating.php" method="post">
 			<div class = "row insert_criteria">
-
 				<div class = "col-md-2">
 					<h4>Earthquakes:</h4>
 
@@ -73,27 +67,27 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Richter (Lower)</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input type="text" name="lower" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
-
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Richter (Upper)</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input type="text" name="upper" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>			
 
 				<div class = "col-md-1">
 					<div style ="margin: 0 auto;width: 50%;">
-						<button type="button" class="btn btn-success" id = "search_earthquakes">Search Earthquakes</button>	
+						<button type="submit" class="btn btn-success" id = "search_earthquakes">Search Earthquakes</button>	
 					</div>
 
 				</div>
 			</div>
-
+			</form>
+			<form id="category_form" action="hurricaneRating.php" method="post">
 			<div class = "row insert_criteria">
-
+			
 				<div class = "col-md-2">
 					<h4>Hurricanes:</h4>
 
@@ -102,24 +96,25 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Category(Lower)</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input type="text" name="lower" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Category(Upper)</span>
-					 	<input type="text" class="form-control" id="basic-url" placeholder="">
+					 	<input type="text" name="upper" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>			
 
 				<div class = "col-md-1">
 					<div style ="margin: 0 auto;width:50%;">
-						<button type="button" class="btn btn-success" id = "search_hurricanes">Search Hurricanes</button>	
+						<button type="submit" class="btn btn-success" id = "search_hurricanes">Search Hurricanes</button>	
 					</div>				
 				</div>
 			</div>
-
+			</form>
+			<form id="f_rating_form" action="tornadoRating.php" method="post">
 			<div class = "row insert_criteria">
 
 				<div class = "col-md-2">
@@ -130,24 +125,25 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">F Rating(Lower)</span>
-					 	<input type="text" class="form-control" id="f_lower" placeholder="">
+					 	<input type="text" name="lower" class="form-control" id="f_lower" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">F Rating(Upper)</span>
-					 	<input type="text" class="form-control" id="f_upper" placeholder="">
+					 	<input type="text" name="upper" class="form-control" id="f_upper" placeholder="">
 					</div>
 				</div>			
 
 				<div class = "col-md-1">
 					<div style ="margin: 0 auto;width: 50%;">
-						<button type="button" class="btn btn-success" id = "search_tornadoes">Search Tornadoes</button>	
+						<button type="submit" class="btn btn-success" id = "search_tornadoes">Search Tornadoes</button>	
 					</div>				
 				</div>
 			</div>
-
+			</form>
+			<form id="acreage_form" action="fireRating.php" method="post">
 			<div class = "row insert_criteria">
 
 				<div class = "col-md-2">
@@ -158,36 +154,35 @@
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Acreage(Lower)</span>
-					 	<input type="text" class="form-control" id="a_lower" placeholder="">
+					 	<input type="text" name="lower" class="form-control" id="a_lower" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Acreage(Upper)</span>
-					 	<input type="text" class="form-control" id="a_upper" placeholder="">
+					 	<input type="text" name="upper" class="form-control" id="a_upper" placeholder="">
 					</div>
 				</div>			
 
 				<div class = "col-md-1">
 					<div style ="margin: 0 auto;width:50%;">					
-						<button type="button" class="btn btn-success" id = "search_fires">Search Fires</button>	
+						<button type="submit" class="btn btn-success" id = "search_fires">Search Fires</button>	
 					</div>				
 				</div>
 			</div>
-
+			</form>
 		</div> <!--close query body-->
 
-		
+	<span id="result_earthquakes"></span>
+	<span id="result_hurricanes"></span>
+	<span id="result_tornadoes"></span>
+	<span id="result_fires"></span>	
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="result_rating.js" type="text/javascript"></script>
   </body>
-  	<!-- closing db connection -->
-    <?php
-
-        mysqli_close($link);
-    ?>
 </html>

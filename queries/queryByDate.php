@@ -7,6 +7,8 @@
 	$f = $_POST["fires"];
 	$d = $_POST["daily"];
 
+	
+
 	$str ='';
 	$first = TRUE;
 	$prev = '';
@@ -30,14 +32,33 @@
 	}
 	$sql = "SELECT * FROM ".$str."WHERE ".$top.'.Date = "'.$date.'"';
 	$res = mysqli_query($link, $sql);
-	echo "<table>";
-	while($row = mysqli_fetch_array($res)){
-		echo "<tr>";
+	//echo "<div class = "row">TEST</h1>";
+	//echo "<div class = "col-md-1"></div>";
+	//echo "<div class = "col-md-10">";
+	echo "<div class = ".'"row"'.">";
+
+
+	echo "<div class = ".'"col-md-12"'.">";
+
+	while($row = mysqli_fetch_array($res,MYSQL_ASSOC)){
+		
+		echo "<div class = ".'"row"'.">";
+
 		foreach($row as $key => $value){
-			echo "<td>".$value."</td>";
+			echo "<div class = ".'"col-md-1"'.">".$value."</div>";
 		}
-			echo "</tr>";	
+		echo "</div>"; //close the row
+			
 	}
-	echo "</table>";
+
+	echo "</div>"; //close the middle column
+
+
+	echo "</div>"; //close the big row
+	//echo "</div>"
+	//echo "<div class = "col-md-1"></div>"; 
+
+
+	//echo "</div>"; //close the big row
 	mysqli_close($link);
 ?>

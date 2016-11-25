@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">  
-    <!--initial connection script -->
-    <?php    	
-
-    	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");		
-	?>   
-    
+<html lang="en">     
   	<head>
 
 	    <meta charset="utf-8">
@@ -63,21 +57,20 @@
 			  	<li role="presentation"><a href="query_rating.php">Rating</a></li>
 			</ul>
 
-			<div class = "row insert_criteria">
-
-				
+			<form id = "fate_form" action = "queryByFatalities.php" method="post">
 			
+			<div class = "row insert_criteria">
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Fatalities (Lower)</span>
-					 	<input type="text" class="form-control" id="lower_bound" placeholder="">
+					 	<input type="text" class="form-control" name="lower_bound" placeholder="">
 					</div>
 				</div>
 
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Fatalities(Upper)</span>
-					 	<input type="text" class="form-control" id="upper_bound" placeholder="">
+					 	<input type="text" class="form-control" name="upper_bound" placeholder="">
 					</div>
 				</div>
 
@@ -85,7 +78,7 @@
 				<div class = "col-md-1">
 					<div class="checkbox">
 					   	<label>
-					   		<input type="checkbox" id = "tornado"> Tornadoes
+					   		<input type="checkbox" name = "tornadoes"> Tornadoes
 					   	</label>
 					</div>
 				</div>
@@ -93,7 +86,7 @@
 				<div class = "col-md-1">
 					<div class="checkbox">
 					   	<label>
-					   		<input type="checkbox" id = "hurricane"> Hurricanes
+					   		<input type="checkbox" name = "hurricanes"> Hurricanes
 					   	</label>
 					</div>
 				</div>
@@ -101,39 +94,26 @@
 				<div class = "col-md-1">
 					<div class="checkbox">
 					   	<label>
-					   		<input type="checkbox" id = "earthquake"> Earthquakes   
+					   		<input type="checkbox" name = "earthquakes"> Earthquakes   
 					   	</label>
 					</div>
-				</div>
+				</div>				
 
 				<div class = "col-md-1">
-					<div class="checkbox">
-					   	<label>
-					   		<input type="checkbox" id = "fire"> Fires
-					   	</label>
-					</div>
+					<button id="sub" type="submit" class="btn btn-success">Submit</button>
+					<!--<button type = "button" id = "sub">Search</button>-->					
 				</div>
-
-								
-
-				<div class = "col-md-1">
-					<button type="button" class="btn btn-success" id = "search_button">Search</button>					
-				</div>
-
 
 			</div>
+			</form>
 		</div> <!--close query body-->
 
-		
+	<span id ="result"></span>	
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="result_fatalities.js" type="text/javascript"></script>
   </body>
-  	<!-- closing db connection -->
-    <?php
-
-        mysqli_close($link);
-    ?>
 </html>
