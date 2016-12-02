@@ -10,6 +10,7 @@
  
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwvDeUmfCVgrrUyU29pb_kWzjW600k3Ac"></script>
+    <script type="text/javascript" src="us_borders_dict.js"></script>
     <script>
       // This example creates a custom overlay called USGSOverlay, containing
       // a U.S. Geological Survey (USGS) image of the relevant area on the map.
@@ -28,10 +29,10 @@
 
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: {lat: 39, lng: -98},
+          zoom: 5,
+          center: {lat: 60, lng: -150},
         });
-
+/*
       function loadXMLDoc() {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
@@ -52,6 +53,8 @@
   	var xmlDoc = parser.parseFromString(txt.loadXMLdoc,"text/xml");
   	var statesize = xmlDoc.getElementsByTagName("state")[0].childNodes.length;
   	var coords = [];
+*/
+/*
     var state = document.getElementsByTagName("state")[0];
   	for(i = 1; i < statesize; i+=2)
   	{
@@ -72,18 +75,18 @@
   	  fillOpacity: 0.35
   	});
   	overlay.setMap(map);
-
-  	/*
+*/
+/*
   	var triangleCoords = [
             {lat: 25.774, lng: -80.190},
             {lat: 18.466, lng: -66.118},
             {lat: 32.321, lng: -64.757},
             {lat: 25.774, lng: -80.190}
           ];
-
+*/
           // Construct the polygon.
           var bermudaTriangle = new google.maps.Polygon({
-            paths: triangleCoords,
+            paths: getCoords("california") /*us_borders_dict["alabama"]*/ /*triangleCoords*/,
             strokeColor: '#FF0000',
             strokeOpacity: 0.8,
             strokeWeight: 2,
@@ -91,7 +94,7 @@
             fillOpacity: 0.35
           });
           bermudaTriangle.setMap(map);
-  	*/
+  	
           // var bounds = new google.maps.LatLngBounds(
               // new google.maps.LatLng(62.281819, -150.287132),
               // new google.maps.LatLng(62.400471, -150.005608));

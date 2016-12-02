@@ -10,10 +10,13 @@
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
-  	</head>
+  		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwvDeUmfCVgrrUyU29pb_kWzjW600k3Ac&libraries=geometry"></script>
+    	<script type="text/javascript" src="../map/us_borders_dict.js"></script>
+	<script type="text/javascript" src="../info_box.js"></script>
+    	
+	</head>
 
   	<body>
-
 		<nav class="navbar navbar-default navbar-custom">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,14 +44,13 @@
 		      	  	<p class="navbar-btn">
                     	<a href="../insert/insert_daily.php" class="btn btn-success">Add Data</a>
                 	</p>
-                </li>		        
+               		 </li>		        
 		      </ul>
 
 
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav> 	
-
 
 		<div class="query_body">
 
@@ -100,24 +102,25 @@
 					</div>
 				</div>
 
-				<div class = "col-md-2">
-					<div class="checkbox">
-					   	<label>
-					   		<input type="checkbox" name = "daily_data"> Daily Weather
-					   	</label>
-					</div>
-				</div>
-
 				<div class = "col-md-1">
-					<button id="sub" type="button" class="btn btn-success">Submit</button>		
+					<button id="sub" type="submit" class="btn btn-success">Submit</button>		
 				<!--<button id = "sub">Search</button>-->
 				</div>
 
 			</div>
 			</form>
 		</div> <!--close query body-->
+		<div class = "row">
+				<div class = "col-md-2"></div>
 
-	<span id="result"></span>		
+				<div class = "col-md-8">
+					<div id="map" style="height:600px;"></div>
+				</div>
+
+				<div class = "col-md-2"></div>
+
+			</div>	
+	<div id="result"></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

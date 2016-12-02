@@ -39,7 +39,7 @@
           zoom: 7,
           center: {lat: 22, lng: -70.109291},
         });
-
+/*
       function loadXMLDoc() {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
@@ -80,8 +80,8 @@
 	  fillOpacity: 0.35
 	});
 	overlay.setMap(map);
-
-	/*
+*/
+	
 	var triangleCoords = [
           {lat: 25.774, lng: -80.190},
           {lat: 18.466, lng: -66.118},
@@ -99,7 +99,7 @@
           fillOpacity: 0.35
         });
         bermudaTriangle.setMap(map);
-	*/
+	
         // var bounds = new google.maps.LatLngBounds(
             // new google.maps.LatLng(62.281819, -150.287132),
             // new google.maps.LatLng(62.400471, -150.005608));

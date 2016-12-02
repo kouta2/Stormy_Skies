@@ -10,7 +10,10 @@
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
-  	</head>
+ 		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwvDeUmfCVgrrUyU29pb_kWzjW600k3Ac&libraries=geometry"></script>
+    		<script type="text/javascript" src="../map/us_borders_dict.js"></script>
+		<script type="text/javascript" src="../info_box.js"></script>
+	</head>
 
   	<body>
 
@@ -107,7 +110,16 @@
 			</div>
 			</form>
 		</div> <!--close query body-->
+		<div class = "row">
+				<div class = "col-md-2"></div>
 
+				<div class = "col-md-8">
+					<div id="map" style="height:600px;"></div>
+				</div>
+
+				<div class = "col-md-2"></div>
+
+			</div>	
 	<span id ="result"></span>	
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
