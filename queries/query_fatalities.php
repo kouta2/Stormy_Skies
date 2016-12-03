@@ -6,13 +6,15 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Stormy Skies Stage 4</title> 
+	    <title>Stormy Skies</title> 
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
  		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwvDeUmfCVgrrUyU29pb_kWzjW600k3Ac&libraries=geometry"></script>
     		<script type="text/javascript" src="../map/us_borders_dict.js"></script>
 		<script type="text/javascript" src="../info_box.js"></script>
+	    <link href="../img/header.png" rel = "icon" >
+
 	</head>
 
   	<body>
@@ -32,8 +34,8 @@
 		        
 
 		        <li><a href="#" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Predictions</a></li>
-		        <li><a href="../map/map.php">Map</a></li>
+		        <li><a href="../predictions/predictions.php">Playback</a></li>
+		        
 		        
 		      </ul>
 
@@ -63,6 +65,8 @@
 			<form id = "fate_form" action = "queryByFatalities.php" method="post">
 			
 			<div class = "row insert_criteria">
+				
+
 				<div class = "col-md-2">
 					<div class="input-group">
 					  	<span class="input-group-addon">Fatalities (Lower)</span>
@@ -71,53 +75,55 @@
 				</div>
 
 				<div class = "col-md-2">
-					<div class="input-group">
+					<div class="input-group" style="text-align: center;">
 					  	<span class="input-group-addon">Fatalities(Upper)</span>
 					 	<input type="text" class="form-control" name="upper_bound" placeholder="">
 					</div>
 				</div>
 
 
-				<div class = "col-md-1">
-					<div class="checkbox">
+				<div class = "col-md-2">
+					<div class="checkbox" style = "text-align: center;">
 					   	<label>
-					   		<input type="checkbox" name = "tornadoes"> Tornadoes
+					   		<input type="radio" name = "radio"value = "tornadoes"> Tornadoes
 					   	</label>
 					</div>
 				</div>
 
-				<div class = "col-md-1">
-					<div class="checkbox">
+				<div class = "col-md-2">
+					<div class="checkbox" style = "text-align: center;">
 					   	<label>
-					   		<input type="checkbox" name = "hurricanes"> Hurricanes
+					   		<input type="radio" name = "radio"value = "hurricanes"> Hurricanes
 					   	</label>
 					</div>
 				</div>
 
-				<div class = "col-md-1">
-					<div class="checkbox">
+				<div class = "col-md-2">
+					<div class="checkbox" style="text-align: center;">
 					   	<label>
-					   		<input type="checkbox" name = "earthquakes"> Earthquakes   
+					   		<input type="radio" name = "radio" value = "earthquakes"> Earthquakes   
 					   	</label>
 					</div>
 				</div>				
 
-				<div class = "col-md-1">
-					<button id="sub" type="submit" class="btn btn-success">Submit</button>
+				<div class = "col-md-2">
+					<button id="sub" type="submit" style = "width: 100%;"class="btn btn-success">Submit</button>
 					<!--<button type = "button" id = "sub">Search</button>-->					
 				</div>
+
+				
 
 			</div>
 			</form>
 		</div> <!--close query body-->
 		<div class = "row">
-				<div class = "col-md-2"></div>
+				<div class = "col-md-1"></div>
 
-				<div class = "col-md-8">
+				<div class = "col-md-10">
 					<div id="map" style="height:600px;"></div>
 				</div>
 
-				<div class = "col-md-2"></div>
+				<div class = "col-md-1"></div>
 
 			</div>	
 	<span id ="result"></span>	

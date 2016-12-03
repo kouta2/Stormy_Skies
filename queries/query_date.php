@@ -6,12 +6,14 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Stormy Skies Stage 4</title> 
+	    <title>Stormy Skies</title> 
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
   		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwvDeUmfCVgrrUyU29pb_kWzjW600k3Ac&libraries=geometry"></script>
     	<script type="text/javascript" src="../map/us_borders_dict.js"></script>
+	    <link href="../img/header.png" rel = "icon" >
+
 	<script type="text/javascript" src="../info_box.js"></script>
     	
 	</head>
@@ -32,8 +34,7 @@
 		        
 
 		        <li><a href="#" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Predictions</a></li>
-		        <li><a href="../map/map.php">Map</a></li>
+		        <li><a href="../predictions/predictions.php">Playback</a></li>
 		        
 		      </ul>
 
@@ -63,7 +64,8 @@
 			<form id= "date_form" action="queryByDate.php" method="post">	
 			<div class = "row insert_criteria">
 			
-				<div class = "col-md-2">
+				<div class = "col-md-2"></div>
+				<div class = "col-md-3">
 					<div class="input-group">
 					  	<span class="input-group-addon">Date</span>
 					 	<input type="text" class="form-control" name="date" placeholder="mm/dd/yyyy">
@@ -107,17 +109,36 @@
 				<!--<button id = "sub">Search</button>-->
 				</div>
 
+				<div class = "col-md-2"></div>
 			</div>
 			</form>
 		</div> <!--close query body-->
 		<div class = "row">
-				<div class = "col-md-2"></div>
+				<div class = "col-md-2">
+					<ul style = "list-style-type: none;">
+						<li><h3><span class = "label label-default" style = "background-color: #660066;">Tornadoes</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #FF0000;">Fires</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #000066;">Hurricanes</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #FF9933;">Earthquakes</span></h3></li>
+					</ul>
+
+
+
+				</div>
 
 				<div class = "col-md-8">
 					<div id="map" style="height:600px;"></div>
 				</div>
 
-				<div class = "col-md-2"></div>
+				<div class = "col-md-2">
+					<ul style = "list-style-type: none;">
+						<li><h3><span class = "label label-default" style = "background-color: #000088;"><25°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #8744ba;">25° - 40°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #008800;">40° - 60°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #e3ea12;">60° - 80°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #dd2121;">>80°</span></h3></li>
+					</ul>
+				</div>
 
 			</div>	
 	<div id="result"></div>

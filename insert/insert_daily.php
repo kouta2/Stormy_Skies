@@ -11,6 +11,8 @@
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
+	    <link href="../img/header.png" rel = "icon" >
+
   	</head>
 
   	<body>
@@ -30,8 +32,7 @@
 		        
 
 		        <li><a href="../queries/query_date.php" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Predictions</a></li>
-		        <li><a href="../map/map.php">Map</a></li>
+		        <li><a href="../predictions/predictions.php">Playback</a></li>
 		        
 		      </ul>
 
@@ -55,7 +56,6 @@
 			  	<li role="presentation"><a href="insert_tornado.php">Tornados</a></li>
 			  	<li role="presentation"><a href="insert_earthquake.php">Earthquakes</a></li>
 			  	<li role="presentation"><a href="insert_fire.php">Fires</a></li>
-			  	<li role="presentation"><a href="insert_volcano.php">Volcanos</a></li>
 			</ul>
 
 			<form id="insertForm" action="daily_info.php" method="post">

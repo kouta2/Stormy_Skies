@@ -1,6 +1,14 @@
+function clearTables(){
+	$("#result_earthquakes").html(null);
+	$("#result_hurricanes").html(null);
+	$("#result_tornadoes").html(null);
+	$("#result_fires").html(null);
+}
+
 $("#search_earthquakes").click(function() {
         var data = $("#richter_form :input").serializeArray();
-
+	
+	clearTables();
         $.post( $("#richter_form").attr("action"), data, function(info) {$("#result_earthquakes").html(info); } );  
 
         clearInputAfterSubmitEarthquakes();
@@ -19,7 +27,8 @@ function clearInputAfterSubmitEarthquakes() {
 $("#search_hurricanes").click(function() {
         var data = $("#category_form :input").serializeArray();
 
-        $.post( $("#category_form").attr("action"), data, function(info) {$("#result_hurricanes").html(info); } );  
+        clearTables();
+	$.post( $("#category_form").attr("action"), data, function(info) {$("#result_hurricanes").html(info); } );  
 
         clearInputAfterSubmitHurricanes();
 
@@ -36,7 +45,8 @@ function clearInputAfterSubmitHurricanes() {
 }
 $("#search_fires").click(function() {
         var data = $("#acreage_form :input").serializeArray();
-
+	
+	clearTables();
         $.post( $("#acreage_form").attr("action"), data, function(info) {$("#result_fires").html(info); } );  
 
         clearInputAfterSubmitFires();
@@ -54,7 +64,8 @@ function clearInputAfterSubmitFires() {
 }
 $("#search_tornadoes").click(function() {
         var data = $("#f_rating_form :input").serializeArray();
-
+	
+	clearTables();
         $.post( $("#f_rating_form").attr("action"), data, function(info) {$("#result_tornadoes").html(info); } );  
 
         clearInputAfterSubmitTornadoes();

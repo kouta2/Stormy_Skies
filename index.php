@@ -12,13 +12,14 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Stormy Skies Stage 4</title> 
+	    <title>Stormy Skies</title> 
 	    <!-- Bootstrap -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="css/styles.css" rel = "stylesheet">  
+	    <link href="img/header.png" rel = "icon" >
   	</head>
 
-  	<body>
+  	<body style="background-image: url(img/background.jpg);">
 
 		<nav class="navbar navbar-default navbar-custom">
 		  <div class="container-fluid">
@@ -35,8 +36,8 @@
 		        
 
 		        <li><a href="queries/query_date.php" class = "active" >Queries</a></li>
-		        <li><a href="predictions/predictions.php">Predictions</a></li>
-		        <li><a href="map/map.php">Map</a></li>
+		        <li><a href="predictions/predictions.php">Playback</a></li>
+		        
 		        
 		      </ul>
 
@@ -56,17 +57,27 @@
 		</nav> 	
 
 		<div class = "row">
-
 			<div class = "col-md-2"></div>
-
 			<div class = "col-md-8">
+
+				<a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
+
+				</a><div id="awcc1480807762295" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1480807762295"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+			</div>
+		</div>
+
+		<div class = "row">
+
+			<div class = "col-md-3">test</div>
+			<div class = "col-md-6">
+
 				<div class = "jumbotron">
 						
 					<!-- div to hold the page title/subtitle/description/etc -->
 					<div class = "header">
 
 						<div class = "page-header">
-							<h2 style = "text-align: center;vertical-align: middle;">Wecome to Stormy Skies</h2>
+							<h2 style = "text-align: center;vertical-align: middle;">Wecome to Stormy Skies!</h2>
 							<h3 style = "text-align: center;vertical-align: middle;">With 65 years of weather data we've got everything you need.</h3>
 
 						</div>
@@ -81,10 +92,8 @@
 					
 
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-					  
-
-					  <!-- Wrapper for slides -->
+  
+  					  <!-- Wrapper for slides -->
 					  <div class="carousel-inner" role="listbox">
 					    <div class="item active">
 					      <img src="img/cloudy.jpg" alt="Chania" width = "800px" height="600px" style = "margin:0 auto;">
@@ -118,16 +127,16 @@
 					<div class = "footer">
 						<h3 style = "text-align: center;vertical-align: middle;"> Check us out on YouTube! </h3>
 						<div style = "text-align: center;vertical-align: middle;"><button  class = "btn btn-danger"> Go! </button></div>
-
 					</div>	
 					
 
 
 				</div>
-
 			</div>
 
-			<div class = "col-md-2"></div>
+			<div class = "col-md-3">
+				<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+			</div>
 		</div>
 
 

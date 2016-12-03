@@ -6,10 +6,12 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Stormy Skies Stage 4</title> 
+	    <title>Stormy Skies</title> 
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
-	    <link href="../css/styles.css" rel = "stylesheet">  
+	    <link href="../css/styles.css" rel = "stylesheet"> 
+	    <link href="../img/header.png" rel = "icon" >
+
   	</head>
 
   	<body>
@@ -29,8 +31,7 @@
 		        
 
 		        <li><a href="../queries/query.php" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Predictions</a></li>
-		        <li><a href="../map/map.php">Map</a></li>
+		        <li><a href="../predictions/predictions.php">Playback</a></li>
 		        
 		      </ul>
 
@@ -53,7 +54,6 @@
 			  	<li role="presentation"><a href="insert_tornado.php">Tornados</a></li>
 			  	<li role="presentation" class="active"><a href="insert_earthquake.php">Earthquakes</a></li>
 			  	<li role="presentation"><a href="insert_fire.php">Fires</a></li>
-			  	<li role="presentation"><a href="insert_volcano.php">Volcanos</a></li>
 			</ul>
 
 			<form id="insertForm" action="earthquake_info.php" method="post">
@@ -65,7 +65,7 @@
 					</div>
 				</div>
 
-				<div class = "col-md-2">
+				<div class = "col-md-4">
 					<div class="input-group">
 					  	<span class="input-group-addon">States Affected</span>
 					 	<input name="States_Affected" id="States Affected" type="text" class="form-control" placeholder="comma separated list">

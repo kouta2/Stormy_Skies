@@ -32,9 +32,6 @@ USGSOverlay.prototype = new google.maps.OverlayView();
 	function addMarker(row, severe_exists){
 		row_split = row.split(",");
 		var lat_lng = {lat: parseFloat(row_split[3]), lng: parseFloat(row_split[4])};
-		if(isMarkerNearPoly(lat_lng) == false && severe_exists == 1){
-			return;
-		}
 
 		// var precipitation = Math.min(Math.abs(parseFloat(row_split[6])), 10);
 		// var snowfall = Math.max(parseFloat(row_split[7]), 0);
@@ -84,8 +81,6 @@ USGSOverlay.prototype = new google.maps.OverlayView();
 			infoWindow.open(map, station_marker);
 		});
 
-		// station_marker.setIcon('/var/www/html/img/blue.png'); // '../img/green.png');
-		// station_marker.setMap(map);
 		info_window_list.push(infoWindow);
 		markers_list.push(station_marker);
 	}
@@ -140,45 +135,6 @@ USGSOverlay.prototype = new google.maps.OverlayView();
 		markers_list.push(weather_marker);
 	}
 
-	function isMarkerInPoly(position, poly) {
-		var point = new google.maps.LatLng(position.lat, position.lng);
-		return google.maps.geometry.poly.containsLocation(point, poly);
-	}
-
-	function isMarkerNearPoly(position) {
-		for(var i=0; i<overlays_list.length;i++) {
-			var poly = overlays_list[i]; // .getPath();
-			if(isMarkerInPoly(position, poly)){
-				return true;
-			}
-			else {
-				var threshold = 600000;
-				var path = poly.getPath();
-				for(var j = 0; j < path.length; j++) {
-					var lat1 = position.lat;
-					var lat2 = path.getAt(i).lat();
-					var lon1 = position.lng;
-					var lon2 = path.getAt(i).lng();
-					var R = 6371000; // metres
-					var latitude1 = (lat1*3.14)/180;
-					var latitude2 = (lat2*3.14)/180;
-					var diff_lat = ((lat2-lat1)*3.14)/180;
-					var diff_lon = ((lon2-lon1)*3.14)/180;
-
-					var a = Math.sin(diff_lat/2) * Math.sin(diff_lat/2) +
-        					Math.cos(latitude1) * Math.cos(latitude2) *
-        					Math.sin(diff_lon/2) * Math.sin(diff_lon/2);
-					var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-
-					var dist = R * c;
-					if(dist < threshold) {
-						return true;
-					}
-				}
-			}
-		}
-		return false;
-	}
 
 	function addOverlay(row){
 		var data_split = row.split("!");
@@ -248,32 +204,18 @@ USGSOverlay.prototype = new google.maps.OverlayView();
 		info_window_list.length=0;
 	}
 	google.maps.event.addDomListener(window, 'load', initMap);
-/*$("#sub").click( function() {
-        var data = $("#date_form :input").serializeArray(); // myForm is from test_inputs.php. We get its inputs.
 
-        $.post( $("#date_form").attr("action"), data, 
-		function(info) {
-			$("#result").html(info); 
-			var states = info.split(",");
-			for (var state of states){
-				addOverlay(state);
-			}
-		} 
-	);	
-	clearInputAfterSubmit();
-});*/
-
-$("#date_form").submit( function() {
+$("#pred_form").submit( function() {
   return false;
 });
 
 function clearInputAfterSubmit() {
-        $("#date_form :input").each( function() {
+        $("#pred_form :input").each( function() {
                 $(this).val('');
         });
 }
 $(document).ready(function () {
-    $('#date_form').on('submit', function(e) {
+    $('#pred_form').on('submit', function(e) {
         //e.preventDefault();
         $.ajax({
             url : $(this).attr('action') || window.location.pathname,

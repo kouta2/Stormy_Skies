@@ -10,6 +10,8 @@
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
+	    <link href="../img/header.png" rel = "icon" >
+	    
   	</head>
 
   	<body>

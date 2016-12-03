@@ -16,7 +16,12 @@
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
-  	</head>
+  		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwvDeUmfCVgrrUyU29pb_kWzjW600k3Ac&libraries=geometry"></script>
+    		<script type="text/javascript" src="../map/us_borders_dict.js"></script>
+		<script type="text/javascript" src="../info_box.js"></script>
+	    <link href="../img/header.png" rel = "icon" >
+
+	</head>
 
   	<body>
 
@@ -35,8 +40,7 @@
 		        
 
 		        <li><a href="../queries/query_date.php" class = "active" >Queries</a></li>
-		        <li><a href="#">Predictions</a></li>
-		        <li><a href="../map/map.php">Map</a></li>
+		        <li><a href="#">Playback</a></li>
 		        
 		      </ul>
 
@@ -56,36 +60,45 @@
 		</nav> 	
 
 		<div class="query_body">
-
+			<form id="pred_form" action="queryByPredictions.php" method="post"> 
 			<div class = "row insert_criteria">
 
-				<div class = "col-md-3"></div>
+				<div class = "col-md-4"></div>
 
-				<div class = "col-md-4">				
+				<div class = "col-md-3">				
 					<div class="input-group">
-				  		<span class="input-group-addon">Insert Date for Prediction</span>
-				 			<input id="Date" type="text" class="form-control" id="date" placeholder="mm/dd/yyyy">
+				  		<span class="input-group-addon">Insert Year for Playback</span>
+				 			<input id="Date" type="text" class="form-control" id="date" placeholder="yyyy">
 					</div>
 				</div>
 
-				<div class = "col-md-2">
-					<button onclick="readInputs()" type="button" class="btn btn-success">Submit</button>					
+				<div class = "col-md-1">
+					<button type="submit" class="btn btn-success">Submit</button>					
 				</div>
+				<div class = "col-md-4"></div>
 
 			</div>
 
+			<div class = "row">
+				<div class = "col-md-2"></div>
+
+				<div class = "col-md-8">
+					<div id="map" style="height:600px;"></div>
+				</div>
+
+				<div class = "col-md-2"></div>
+
+			</div>
+			</form>	
+
 			
-		</div> <!--close query body-->
-		
-
-
-    
-   
-
+		</div> <!--close query body--> 
+		<div id="result"></div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="predictions.js"></script>
   </body>
   	<!-- closing db connection -->
     <?php

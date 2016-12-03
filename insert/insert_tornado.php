@@ -10,6 +10,8 @@
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
+	    <link href="../img/header.png" rel = "icon" >
+
   	</head>
 
   	<body>
@@ -29,8 +31,7 @@
 		        
 
 		        <li><a href="../queries/query_date.php" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Predictions</a></li>
-		        <li><a href="../map/map.php">Map</a></li>
+		        <li><a href="../predictions/predictions.php">Playback</a></li>
 		        
 		      </ul>
 
@@ -53,7 +54,6 @@
 			  	<li role="presentation" class="active"><a href="insert_tornado.php">Tornados</a></li>
 			  	<li role="presentation"><a href="insert_earthquake.php">Earthquakes</a></li>
 			  	<li role="presentation"><a href="insert_fire.php">Fires</a></li>
-			  	<li role="presentation"><a href="insert_volcano.php">Volcanos</a></li>
 			</ul>
 			<form id="insertForm" action="tornado_info.php" method="post">
 			<div class = "row insert_criteria">
@@ -71,7 +71,7 @@
 					</div>
 				</div>
 
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 					<div class="input-group">
 					  	<span class="input-group-addon">States Affected</span>
 					 	<input name="States_Affected" id="States Affected" type="text" class="form-control" placeholder="comma separated list">
@@ -92,7 +92,7 @@
 					</div>
 				</div>
 
-				<div class = "col-md-2">
+				<div class = "col-md-1">
 					<button id="sub" type="button" class="btn btn-success">Submit</button>					
 				</div>
 

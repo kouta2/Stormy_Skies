@@ -3,18 +3,31 @@
         $lower = $_POST["lower"];
         $upper = $_POST["upper"];
 
-        $sql = "SELECT * FROM tornadoes as t WHERE t.Fatalities>=$lower and t.Fatalities<=$upper";
+        $sql = "SELECT * FROM tornadoes as t WHERE t.Tornadoes>=$lower and t.Tornadoes<=$upper ORDER BY t.Tornadoes DESC";
         $res = mysqli_query($link,$sql);
-        echo "<br>"."------------Tornadoes-------------"."<br>";
-        echo "<table>";
-        while($row = mysqli_fetch_array($res,MYSQL_ASSOC)){
-                echo "<tr>";
+        $row = mysqli_fetch_array($res,MYSQL_ASSOC);
+	echo '<div class ="text-center"> <fieldset><legend><strong>Tornadoes</strong></legend> </fieldset></div>';
+	echo "<div class = ".'"table.responsive">';
+	echo "<table class = ".'"table">';
+	echo "<thead>";
+	echo "<tr>";
+	foreach($row as $key=>$value){
+		echo "<th>".$key."</th>";
+	}
+	echo "</tr>";
+	echo "</thead>";
+	echo "<tbody>";
+	while($row = mysqli_fetch_array($res,MYSQL_ASSOC)){
+        	echo "<tr>";
+		//echo "<div class = ".'"row"'.">";
                 foreach($row as $key => $value){
-                        echo "<td>".$value."</td>";
+                	echo "<td>".$value."</td>";
+			//echo "<div class = ".'"col-md-1"'.">".$value."</div>";
                 }
                 echo "</tr>";
-        }
-        echo "</table>";
+       	}
+	echo "</tbody>";	
+	echo "</table";
 
-        mysqli_close($link);
+	mysqli_close($link);
 ?>

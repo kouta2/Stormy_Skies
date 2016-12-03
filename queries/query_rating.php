@@ -6,11 +6,16 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Stormy Skies Stage 4</title> 
+	    <title>Stormy Skies</title> 
 	    <!-- Bootstrap -->
 	    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
 	    <link href="../css/styles.css" rel = "stylesheet">  
-  	</head>
+  		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwvDeUmfCVgrrUyU29pb_kWzjW600k3Ac&libraries=geometry"></script>
+    		<script type="text/javascript" src="../map/us_borders_dict.js"></script>
+		<script type="text/javascript" src="../info_box.js"></script>
+	    <link href="../img/header.png" rel = "icon" >
+
+	</head>
 
   	<body>
 
@@ -29,8 +34,7 @@
 		        
 
 		        <li><a href="#" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Predictions</a></li>
-		        <li><a href="../map/map.php">Map</a></li>
+		        <li><a href="../predictions/predictions.php">Playback</a></li>
 		        
 		      </ul>
 
@@ -59,25 +63,26 @@
 			
 			<form id="richter_form" action="earthquakeRating.php" method="post">
 			<div class = "row insert_criteria">
+				<div class = "col-md-1"></div>
 				<div class = "col-md-2">
 					<h4>Earthquakes:</h4>
 
 				</div>
 			
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 					<div class="input-group">
 					  	<span class="input-group-addon">Richter (Lower)</span>
 					 	<input type="text" name="lower" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 					<div class="input-group">
 					  	<span class="input-group-addon">Richter (Upper)</span>
 					 	<input type="text" name="upper" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>			
 
-				<div class = "col-md-1">
+				<div class = "col-md-2">
 					<div style ="margin: 0 auto;width: 50%;">
 						<button type="submit" class="btn btn-success" id = "search_earthquakes">Search Earthquakes</button>	
 					</div>
@@ -87,27 +92,29 @@
 			</form>
 			<form id="category_form" action="hurricaneRating.php" method="post">
 			<div class = "row insert_criteria">
+
+				<div class = "col-md-1"></div>
 			
 				<div class = "col-md-2">
 					<h4>Hurricanes:</h4>
 
 				</div>
 			
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 					<div class="input-group">
 					  	<span class="input-group-addon">Category(Lower)</span>
 					 	<input type="text" name="lower" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>
 
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 					<div class="input-group">
 					  	<span class="input-group-addon">Category(Upper)</span>
 					 	<input type="text" name="upper" class="form-control" id="basic-url" placeholder="">
 					</div>
 				</div>			
 
-				<div class = "col-md-1">
+				<div class = "col-md-2">
 					<div style ="margin: 0 auto;width:50%;">
 						<button type="submit" class="btn btn-success" id = "search_hurricanes">Search Hurricanes</button>	
 					</div>				
@@ -117,26 +124,27 @@
 			<form id="f_rating_form" action="tornadoRating.php" method="post">
 			<div class = "row insert_criteria">
 
+				<div class = "col-md-1"></div>
 				<div class = "col-md-2">
 					<h4>Tornadoes:</h4>
 
 				</div>
 			
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 					<div class="input-group">
-					  	<span class="input-group-addon">F Rating(Lower)</span>
+					  	<span class="input-group-addon">Number of Tornadoes(Lower)</span>
 					 	<input type="text" name="lower" class="form-control" id="f_lower" placeholder="">
 					</div>
 				</div>
 
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 					<div class="input-group">
-					  	<span class="input-group-addon">F Rating(Upper)</span>
+					  	<span class="input-group-addon">Number of Tornadoes(Upper)</span>
 					 	<input type="text" name="upper" class="form-control" id="f_upper" placeholder="">
 					</div>
 				</div>			
 
-				<div class = "col-md-1">
+				<div class = "col-md-2">
 					<div style ="margin: 0 auto;width: 50%;">
 						<button type="submit" class="btn btn-success" id = "search_tornadoes">Search Tornadoes</button>	
 					</div>				
@@ -146,33 +154,34 @@
 			<form id="acreage_form" action="fireRating.php" method="post">
 			<div class = "row insert_criteria">
 
+				<div class = "col-md-1"></div>
 				<div class = "col-md-2">
 					<h4>Fires:</h4>
 
 				</div>
 			
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 					<div class="input-group">
 					  	<span class="input-group-addon">Acreage(Lower)</span>
 					 	<input type="text" name="lower" class="form-control" id="a_lower" placeholder="">
 					</div>
 				</div>
 
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 					<div class="input-group">
 					  	<span class="input-group-addon">Acreage(Upper)</span>
 					 	<input type="text" name="upper" class="form-control" id="a_upper" placeholder="">
 					</div>
 				</div>			
 
-				<div class = "col-md-1">
+				<div class = "col-md-2">
 					<div style ="margin: 0 auto;width:50%;">					
 						<button type="submit" class="btn btn-success" id = "search_fires">Search Fires</button>	
 					</div>				
 				</div>
 			</div>
 			</form>
-		</div> <!--close query body-->
+		</div> <!--close query body-->	
 
 	<span id="result_earthquakes"></span>
 	<span id="result_hurricanes"></span>
