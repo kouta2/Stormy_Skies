@@ -74,7 +74,16 @@
 			</div>
 			</form>
 			<div class = "row">
-				<div class = "col-md-2"></div>
+				<div class = "col-md-2">
+					<ul style = "list-style-type: none;">
+						<li><h3><span class = "label label-default" style = "background-color: #000088;"><25°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #8744ba;">25° - 40°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #008800;">40° - 60°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #e3ea12;">60° - 80°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #dd2121;">>80°</span></h3></li>
+					</ul>
+					
+				</div>
 
 				<div class = "col-md-8">
 					<div id="map" style="height:600px;"></div>
@@ -84,7 +93,24 @@
 
 			</div>		
 		</div> <!--close query body--> 
+
+		<div class = "row">
+			<div class = "row">
+				<div class = "col-md-2"></div>
+				<div class = "col-md-8">
+					<div id = "progress" class="progress">	      		
+		   		 	</div>
+		   		 </div>	
+		   		 
+				<div class = "col-md-2"></div>
+	 		 </div>
+	 	</div>
+
 		<div id="result"></div>
+
+
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

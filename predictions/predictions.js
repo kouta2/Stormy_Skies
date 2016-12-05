@@ -2,6 +2,8 @@ var overlay;
 var map;
 var overlays_list=[];
 var markers_list=[];
+var markers_list2=[];
+var markers_list3=[];
 var info_window_list=[];
 var global_index = 0;
 
@@ -32,13 +34,16 @@ USGSOverlay.prototype = new google.maps.OverlayView();
 	   this.setMap(map);
 	 }
 	function addMarker(daily_split_rows, i){
+		
 		window.setTimeout(function() {
-		clearOverlays();
 		for(var j=0;j<50;j++){	
 			var row = daily_split_rows[j * 365 + i];
 			row_split = row.split(",");
 			var lat_lng = {lat: parseFloat(row_split[3]), lng: parseFloat(row_split[4])};
-
+			if(parseFloat(row_split[8]) == -99.9)
+			{
+				continue;
+			}
 			var image = "../img/red.png"; 
 			var avg_temp = parseFloat(row_split[8]);
 			if(avg_temp < 25)
@@ -62,9 +67,16 @@ USGSOverlay.prototype = new google.maps.OverlayView();
 				map: map,
 				icon: image
 			});
-			markers_list.push(station_marker);
+			markers_list3.push(station_marker);
 		}
-	}, i*220);
+		clearOverlays();
+		markers_list = markers_list2;
+		markers_list2 = markers_list3;
+		markers_list3=[];
+		var progress = '<div class="progress-bar" role="progressbar" style="width: '+ ((i+1)*100.0)/365 +'%;"></div>';
+		$('#progress').html(null);
+		$('#progress').html(progress);
+	}, i*120);
 	}
 
 	function addWeatherMarker(row, lat_lng)
