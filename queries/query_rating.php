@@ -17,7 +17,7 @@
 
 	</head>
 
-  	<body>
+  	<body style="background-image: url(../img/background.jpg); color: white;">
 
 		<nav class="navbar navbar-default navbar-custom">
 		  <div class="container-fluid">
@@ -33,8 +33,8 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a href="#" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Playback</a></li>
+		        <li><a style = "color:white;" href="#" class = "active" >Queries</a></li>
+		        <li><a style = "color:white;" href="../predictions/predictions.php">Playback</a></li>
 		        
 		      </ul>
 
@@ -56,9 +56,11 @@
 		<div class="query_body">
 
 			<ul class="nav nav-tabs">
-			 	<li role="presentation"><a href="query_date.php">Date</a></li>
-			  	<li role="presentation"><a href="query_fatalities.php">Fatalities</a></li>
+			  	<li role="presentation"><a style = "color:white;" href="predictions.php">Annual</a></li>
+			 	<li role="presentation"><a style = "color:white;" href="query_date.php">Date</a></li>
+			  	<li role="presentation"><a style = "color:white;" href="query_fatalities.php">Fatalities</a></li>
 			  	<li role="presentation" class ="active"><a href="query_rating.php">Rating</a></li>
+			  	
 			</ul>
 			
 			<form id="richter_form" action="earthquakeRating.php" method="post">

@@ -2,7 +2,9 @@
 	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");
 
 	$severe_weather_selected = False;
-	$date = $_POST['date'];
+	$date2 = $_POST['date'];
+	$date_obj = date_create($date2);
+	$date = date_format($date_obj, "n/j/Y");
 	$queries = array();
 	$type_of_severe = array();
 	foreach($_POST as $key => $value){

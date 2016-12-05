@@ -81,6 +81,9 @@ USGSOverlay.prototype = new google.maps.OverlayView();
 		});
 
 		station_marker.addListener('click', function() {
+			for(var i=0;i< markers_list.length;i++){
+				info_window_list[i].close(map,markers_list[i]);
+			}
 			infoWindow.open(map, station_marker);
 		});
 

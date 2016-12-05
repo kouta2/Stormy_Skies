@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">     
+<html lang="en">  
+    <!--initial connection script -->
+    <?php    	
+
+    	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");		
+	?>   
+    
   	<head>
 
 	    <meta charset="utf-8">
@@ -33,8 +39,8 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a style = "color: white;" href="../queries/query_date.php" class = "active" >Queries</a></li>
-		        <li><a style = "color: white;" href="#">Playback</a></li>
+		        <li><a href="#" class = "active" style = "color:white;">Queries</a></li>
+		        <li><a href="../predictions/predictions.php" style = "color:white;">Playback</a></li>
 		        
 		      </ul>
 
@@ -43,7 +49,7 @@
 		      <ul class="nav navbar-nav navbar-right">
 		      	<li>
 		      	  	<p class="navbar-btn">
-                    	<a href="insert/insert_daily.php" class="btn btn-success">Add Data</a>
+                    	<a href="../insert/insert_daily.php" class="btn btn-success">Add Data</a>
                 	</p>
                 </li>
 		        
@@ -54,14 +60,22 @@
 		</nav> 	
 
 		<div class="query_body">
-			<form id="pred_form" action="queryByPredictions.php" method="post">
+
+			<ul class="nav nav-tabs">
+			  	<li role="presentation" class = "active"><a href="predictions.php">Annual</a></li>
+			 	<li role="presentation"><a style = "color:white;" href="query_date.php">Date</a></li>
+			  	<li role="presentation"><a style = "color:white;"href="query_fatalities.php">Fatalities</a></li>
+			  	<li role="presentation"><a style = "color:white;"href="query_rating.php">Rating</a></li>
+
+			</ul>
+			<form id="pred_form" action="queryByPredictions.php" method="post"> 
 			<div class = "row insert_criteria">
 
 				<div class = "col-md-4"></div>
 
 				<div class = "col-md-3">				
 					<div class="input-group">
-				  		<span class="input-group-addon">Insert Year for Playback</span>
+				  		<span class="input-group-addon">Year</span>
 				 			<input type="text" class="form-control" name="date" placeholder="yyyy">
 					</div>
 				</div>
@@ -72,17 +86,35 @@
 				<div class = "col-md-4"></div>
 
 			</div>
-			</form>
-			<div class = "row">
-				<div class = "col-md-2"></div>
 
-				<div class = "col-md-8">
-					<div id="map" style="height:600px;"></div>
+			<div class = "row">
+				<div class = "col-md-2">
+					<ul style = "list-style-type: none;">
+						<li><h3><span class = "label label-default" style = "background-color: #660066;">Tornadoes</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #FF0000;">Fires</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #000066;">Hurricanes</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #FF9933;">Earthquakes</span></h3></li>
+					</ul>
 				</div>
 
-				<div class = "col-md-2"></div>
+				<div class = "col-md-8">
+					<div id="map" style="height:600px; color:black;"></div>
+				</div>
 
-			</div>		
+				<div class = "col-md-2">
+					<ul style = "list-style-type: none;">
+						<li><h3><span class = "label label-default" style = "background-color: #000088;"><25°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #8744ba;">25° - 40°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #008800;">40° - 60°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #e3ea12;">60° - 80°</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #dd2121;">>80°</span></h3></li>
+					</ul>
+				</div>
+
+			</div>
+			</form>	
+
+			
 		</div> <!--close query body--> 
 		<div id="result"></div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -91,4 +123,9 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="predictions.js"></script>
   </body>
+  	<!-- closing db connection -->
+    <?php
+
+        mysqli_close($link);
+    ?>
 </html>

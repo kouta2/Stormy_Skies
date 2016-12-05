@@ -11,10 +11,13 @@
 		$queries[]= "SELECT * FROM ".$key." WHERE ".$key.'.Date LIKE "%/%/'.$date.'"';
 		$type_of_severe[]= $key;
 	}
+	
+	$queries[]= "SELECT * FROM fires WHERE fires.Date = ".$date;
+	$type_of_severe[]= "fires";
+
 	$tables = array();
 	foreach($queries as $query) {
 		$tables[]=mysqli_query($link,$query);
-		// echo $query;
 	}
 	//echo "<div class = "row">TEST</h1>";
 	//echo "<div class = "col-md-1"></div>";
@@ -49,7 +52,8 @@
 		}
 		$i++;
 	}
-// }	
+// }
+/*	
 	echo "~"; // delimiter between daily weather and severe weather
 	// sending daily weather data
 	
@@ -69,7 +73,7 @@
 	$link = mysqli_connect("127.0.0.1", "ptdrake2", "stormyskies", "StormySkies");
 
 	$date = str_replace("/", "-", $date);
-	$sql_daily = 'SELECT * FROM daily_data WHERE DATE LIKE "%-%-'.$date.'"';
+	$sql_daily = "SELECT * FROM daily_data WHERE DATE LIKE '%-%-$date'";
 	$daily_weather_res = mysqli_query($link, $sql_daily);
 
 	while($row = mysqli_fetch_array($daily_weather_res, MYSQL_ASSOC)){
@@ -91,3 +95,4 @@
 	
 	mysqli_close($link);
 ?>
+*/

@@ -8,7 +8,7 @@
 	//echo "<br>"."------------Earthquakes-------------"."<br>";
 	//echo "<table>";
 	$row = mysqli_fetch_array($res,MYSQL_ASSOC);
-	echo '<div class ="text-center"> <fieldset><legend><strong> Earthquakes</strong> </legend> </fieldset></div>';
+	echo '<div class ="text-center"> <fieldset><legend><strong style="color:white;"> Earthquakes</strong> </legend> </fieldset></div>';
 	echo "<div class = ".'"table.responsive">';
 	echo "<table class = ".'"table">';
 	echo "<thead>";

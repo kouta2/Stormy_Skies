@@ -17,9 +17,9 @@
 
 	</head>
 
-  	<body>
+  	<body style="background-image: url(../img/background.jpg); color: white;">
 
-		<nav class="navbar navbar-default navbar-custom">
+		<nav style = "border-style: none;"class="navbar navbar-default navbar-custom">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -33,8 +33,8 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a href="#" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Playback</a></li>
+		        <li><a href="#" class = "active" style = "color:white;" >Queries</a></li>
+		        <li><a href="../predictions/predictions.php" style = "color:white;">Playback</a></li>
 		        
 		        
 		      </ul>
@@ -57,9 +57,11 @@
 		<div class="query_body">
 
 			<ul class="nav nav-tabs">
-			 	<li role="presentation"><a href="query_date.php">Date</a></li>
+			  	<li role="presentation"><a href="predictions.php" style = "color:white;">Annual</a></li>
+			 	<li role="presentation"><a href="query_date.php" style = "color:white;">Date</a></li>
 			  	<li role="presentation" class ="active"><a href="query_fatalities.php">Fatalities</a></li>
-			  	<li role="presentation"><a href="query_rating.php">Rating</a></li>
+			  	<li role="presentation"><a href="query_rating.php" style = "color:white;">Rating</a></li>
+			  	
 			</ul>
 
 			<form id = "fate_form" action = "queryByFatalities.php" method="post">
@@ -117,13 +119,19 @@
 			</form>
 		</div> <!--close query body-->
 		<div class = "row">
-				<div class = "col-md-1"></div>
+				<div class = "col-md-2">
+					<ul style = "list-style-type: none;">
+						<li><h3><span class = "label label-default" style = "background-color: #c1423c;">Fewer Occurrences</span></h3></li>
+						<li><h3><span class = "label label-default" style = "background-color: #e21106;">More Occurrences</span></h3></li>
+					</ul>
 
-				<div class = "col-md-10">
-					<div id="map" style="height:600px;"></div>
 				</div>
 
-				<div class = "col-md-1"></div>
+				<div class = "col-md-9">
+					<div id="map" style="height:600px; color:black;"></div>
+				</div>
+
+				
 
 			</div>	
 	<span id ="result"></span>	

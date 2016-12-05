@@ -6,7 +6,7 @@
 	$sql = "SELECT * FROM fires as f WHERE f.Size>=$lower and f.Size<=$upper ORDER BY f.Size DESC";
 	$res = mysqli_query($link,$sql);
 	$row = mysqli_fetch_array($res,MYSQL_ASSOC);
-	echo '<div class ="text-center"> <fieldset><legend><strong> Fires</strong> </legend> </fieldset></div>';
+	echo '<div class ="text-center"> <fieldset><legend><strong style="color:white;"> Fires</strong> </legend> </fieldset></div>';
 	echo "<div class = ".'"table.responsive">';
 	echo "<table class = ".'"table">';
 	echo "<thead>";

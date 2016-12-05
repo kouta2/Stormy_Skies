@@ -14,7 +14,7 @@
 
   	</head>
 
-  	<body>
+  	<body style="background-image: url(../img/background.jpg); color: white;">
 
 		<nav class="navbar navbar-default navbar-custom">
 		  <div class="container-fluid">
@@ -30,8 +30,8 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a href="../queries/query.php" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Playback</a></li>
+		        <li><a style = "color:white;"  href="../queries/query.php" class = "active" >Queries</a></li>
+		        <li><a style = "color:white;" href="../predictions/predictions.php">Playback</a></li>
 		        
 		      </ul>
 
@@ -49,11 +49,11 @@
 		<div class="query_body">
 
 			<ul class="nav nav-tabs">
-			 	<li role="presentation"><a href="insert_daily.php">Daily Weather</a></li>
-			  	<li role="presentation"><a href="insert_hurricane.php">Hurricanes</a></li>
-			  	<li role="presentation"><a href="insert_tornado.php">Tornados</a></li>
+			 	<li role="presentation"><a style = "color:white;" href="insert_daily.php">Daily Weather</a></li>
+			  	<li role="presentation"><a style = "color:white;" href="insert_hurricane.php">Hurricanes</a></li>
+			  	<li role="presentation"><a style = "color:white;" href="insert_tornado.php">Tornados</a></li>
 			  	<li role="presentation" class="active"><a href="insert_earthquake.php">Earthquakes</a></li>
-			  	<li role="presentation"><a href="insert_fire.php">Fires</a></li>
+			  	<li role="presentation"><a style = "color:white;" href="insert_fire.php">Fires</a></li>
 			</ul>
 
 			<form id="insertForm" action="earthquake_info.php" method="post">

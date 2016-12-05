@@ -18,8 +18,8 @@
     	
 	</head>
 
-  	<body>
-		<nav class="navbar navbar-default navbar-custom">
+  	<body style="background-image: url(../img/background.jpg); color: white;" >
+		<nav style = "border-style: none;"class="navbar navbar-default navbar-custom">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -33,8 +33,8 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a href="#" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php">Playback</a></li>
+		        <li><a href="#" style = "color:white;" class = "active" >Queries</a></li>
+		        <li><a href="../predictions/predictions.php" style = "color:white;">Playback</a></li>
 		        
 		      </ul>
 
@@ -56,9 +56,11 @@
 		<div class="query_body">
 
 			<ul class="nav nav-tabs">
-			 	<li role="presentation" class="active"><a href="query_date.php">Date</a></li>
-			  	<li role="presentation"><a href="query_fatalities.php">Fatalities</a></li>
-			  	<li role="presentation"><a href="query_rating.php">Rating</a></li>
+			  	<li role="presentation"><a style = "color:white;" href="predictions.php">Annual</a></li>
+			 	<li role="presentation" class="active"><a class = "tab-custom-active" href="query_date.php">Date</a></li>
+			  	<li role="presentation"><a style = "color:white;" href="query_fatalities.php">Fatalities</a></li>
+			  	<li role="presentation"><a style = "color:white;" href="query_rating.php">Rating</a></li>
+
 			</ul>
 
 			<form id= "date_form" action="queryByDate.php" method="post">	
@@ -127,7 +129,7 @@
 				</div>
 
 				<div class = "col-md-8">
-					<div id="map" style="height:600px;"></div>
+					<div id="map" style="height:600px; color:black;"></div>
 				</div>
 
 				<div class = "col-md-2">

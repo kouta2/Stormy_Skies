@@ -6,7 +6,7 @@
         $sql = "SELECT * FROM tornadoes as t WHERE t.Tornadoes>=$lower and t.Tornadoes<=$upper ORDER BY t.Tornadoes DESC";
         $res = mysqli_query($link,$sql);
         $row = mysqli_fetch_array($res,MYSQL_ASSOC);
-	echo '<div class ="text-center"> <fieldset><legend><strong>Tornadoes</strong></legend> </fieldset></div>';
+	echo '<div class ="text-center"> <fieldset><legend><strong style="color:white;">Tornadoes</strong></legend> </fieldset></div>';
 	echo "<div class = ".'"table.responsive">';
 	echo "<table class = ".'"table">';
 	echo "<thead>";

@@ -3,8 +3,6 @@ var map;
 var overlays_list=[];
 var markers_list=[];
 var info_window_list=[];
-var global_index = 0;
-
 USGSOverlay.prototype = new google.maps.OverlayView();
 
       	// Initialize the map and the custom overlay.
@@ -31,40 +29,60 @@ USGSOverlay.prototype = new google.maps.OverlayView();
 	   // Explicitly call setMap on this overlay.
 	   this.setMap(map);
 	 }
-	function addMarker(daily_split_rows, i){
-		window.setTimeout(function() {
-		clearOverlays();
-		for(var j=0;j<50;j++){	
-			var row = daily_split_rows[j * 365 + i];
-			row_split = row.split(",");
-			var lat_lng = {lat: parseFloat(row_split[3]), lng: parseFloat(row_split[4])};
+	function addMarker(row, severe_exists){
+		row_split = row.split(",");
+		var lat_lng = {lat: parseFloat(row_split[3]), lng: parseFloat(row_split[4])};
 
-			var image = "../img/red.png"; 
-			var avg_temp = parseFloat(row_split[8]);
-			if(avg_temp < 25)
-			{
-				image = "../img/blue.png";
-			}
-			else if(avg_temp >= 25 && avg_temp < 40)
-			{
-				image = "../img/purple.png";
-			}
-			else if(avg_temp >= 40 && avg_temp < 60)
-			{
-				image = "../img/green.png";
-			}
-			else if(avg_temp >= 60 && avg_temp < 80)
-			{
-				image = "../img/yellow.png";
-			}
-			var station_marker = new google.maps.Marker({
-				position: lat_lng,
-				map: map,
-				icon: image
-			});
-			markers_list.push(station_marker);
+		// var precipitation = Math.min(Math.abs(parseFloat(row_split[6])), 10);
+		// var snowfall = Math.max(parseFloat(row_split[7]), 0);
+
+		var station_name = "Station Name: " + row_split[1].toUpperCase();
+		var date = "Date: " + row_split[5];
+		var elevation = "Elevation: " + row_split[2];
+		var lat = "Latitude: " + row_split[3] + "°";
+		var lng = "Longitude: " + row_split[4] + "°";
+		var prcp = "Precipitation: " + row_split[6] /*precipitation.toString()*/ + " in.";
+		var snow = "Snowfall: " + row_split[7] /*snowfall.toString()*/ + " in.";
+		var tavg = "Average Temperature: " + row_split[8] + " °F";
+		var tmax = "Maximum Temperature: " + row_split[9] + " °F";
+		var tmin = "Minimum Temperature: " + row_split[10] + " °F";
+
+  		var infoWindow = new google.maps.InfoWindow({
+			content: '<div id="hook" style="height:200px; width:270px; overflow-x:hidden; overflow-y:scroll; white-space:wrap;"><p>' + station_name + '</p><p>' + date + '</p><p>' + elevation + '</p><p>' + lat + '</p><p>' + lng + '</p><p>' + prcp + '</p><p>' + snow + '</p><p>' + tavg + '</p><p>' + tmax + '</p><p>' + tmin + '</p></div>',
+			maxWidth: 270
+			// content: contentString
+		});
+
+		var image = "../img/red.png"; 
+		var avg_temp = parseFloat(row_split[8]);
+		if(avg_temp < 25)
+		{
+			image = "../img/blue.png";
 		}
-	}, i*220);
+		else if(avg_temp >= 25 && avg_temp < 40)
+		{
+			image = "../img/purple.png";
+		}
+		else if(avg_temp >= 40 && avg_temp < 60)
+		{
+			image = "../img/green.png";
+		}
+		else if(avg_temp >= 60 && avg_temp < 80)
+		{
+			image = "../img/yellow.png";
+		}
+		var station_marker = new google.maps.Marker({
+			position: lat_lng,
+			map: map,
+			icon: image
+		});
+
+		station_marker.addListener('click', function() {
+			infoWindow.open(map, station_marker);
+		});
+
+		info_window_list.push(infoWindow);
+		markers_list.push(station_marker);
 	}
 
 	function addWeatherMarker(row, lat_lng)
@@ -172,19 +190,16 @@ USGSOverlay.prototype = new google.maps.OverlayView();
 		for(var i=0;i<overlays_list.length;i++)
 		{
 			overlays_list[i].setMap(null);
-			delete overlays_list[i];
 		}
 		overlays_list.length=0;
 		for(var i=0;i<markers_list.length;i++)
 		{
 			markers_list[i].setMap(null);
-			delete markers_list[i];
 		}
 		markers_list.length=0;
 		for(var i=0;i<info_window_list.length;i++)
 		{
 			info_window_list[i].setMap(null);
-			delete info_window_list[i];
 		}
 		info_window_list.length=0;
 	}
@@ -194,127 +209,6 @@ $("#pred_form").submit( function() {
   return false;
 });
 
-function sleep(miliseconds) 
-{
-   var currentTime = new Date().getTime();
-
-   while (currentTime + miliseconds >= new Date().getTime()) {
-   }
-}
-
-function plotEveryDay(data)
-{
-	
-	var states_daily_split = data.split("~");
-
-
-	var severe_weathers = states_daily_split[0].split(";");
-	var daily_split_rows = states_daily_split[1].split(";");
-/*
-	for(var station of daily_split_rows)
-	{
-		if(station.length > 2)
-		{
-			addMarker(station);
-		}
-	}
-	for(var sev_weth of severe_weathers)
-	{
-		if(sev_weth.length > 2)
-		{
-			addOverlay(sev_weth);
-		}
-	}
-*/
-
-	var index_of_severe = 0;
-
-	// global_index = 0;
-	for(var i = 0; i < 365; i++) // 365 days
-	{
-		var timerID = 0;
-		// timerID = window.setTimeout(function(){
-		// clearOverlays();
-		var date;
-	//	for(var j = 0; j < 50; j++) // 50 stations
-	//	{
-			// var row_split = row.split(",");
-			// date = row_split[5]; // .replace("-", "/");
-		//	if(row.length > 2) 
-		//	{
-		addMarker(daily_split_rows, i);
-		//	}
-	//	}
-		// global_index++;
-		// i += 29;
-/*
-		if(index_of_severe < severe_weathers.length)
-		{
-			date = date.replace("-", "/"); 
-			var row_severe = severe_weathers[index_of_severe];
-			var bool = false;
-			if(row_severe[0] == "tornadoes")
-			{
-				if(date.localeCompare(row_severe[2]) == 0)
-				{
-					bool = true;
-				}
-			}
-			else if(row_severe[0] == "earthquakes")
-			{
-				if(date.localeCompare(row_severe[1]) == 0)
-				{
-					bool = true;
-				}
-			}
-			else if(row_severe[0] == "hurricanes")
-			{
-				if(date.localeCompare(row_severe[2]) == 0)
-				{
-					bool = true;
-				}
-			}
-
-			while(bool == true)
-			{
-				addOverlay(row_severe);
-				index_of_severe++;
-				row_severe = severe_weathers[index_of_severe];
-				bool = false;
-				if(row_severe[0] == "tornadoes")
-				{
-					if(date.localeCompare(row_severe[2]) == 0)
-					{
-						bool = true;
-					}
-				}
-				else if(row_severe[0] == "earthquakes")
-				{
-					if(date.localeCompare(row_severe[1]) == 0)
-					{
-						bool = true;
-					}
-
-				}
-				else if(row_severe[0] == "hurricanes")
-				{
-					if(date.localeCompare(row_severe[2]) == 0)
-					{
-						bool = true;
-					}
-				}
-			}
-		}
-*/
-		// }, 200);
-
-		// sleep(200);
-		// return;
-		// clearOverlays();
-	}
-
-}
-
 function clearInputAfterSubmit() {
         $("#pred_form :input").each( function() {
                 $(this).val('');
@@ -323,25 +217,47 @@ function clearInputAfterSubmit() {
 $(document).ready(function () {
     $('#pred_form').on('submit', function(e) {
         //e.preventDefault();
-        // for(var i = 1; i < 13; i++)
-	// {
-	    // var temp = i.toString() + "/1/" + ($('form').serializeArray())[0]['value']; // .serializeArray();
-	    // var timerID = setInterval(function(){
-	    $.ajax({
-                url : $(this).attr('action') || window.location.pathname,
-                type: "POST",
-                data: $(this).serializeArray(), // ({date: temp}), // .serializeArray(), 
-                success: function (data) {
-		    clearOverlays();
-                    $("#result").html(data);
-		    plotEveryDay(data);
-                },
-                error: function (jXHR, textStatus, errorThrown) {
-                    alert(errorThrown);
-                }
+        $.ajax({
+            url : $(this).attr('action') || window.location.pathname,
+            type: "POST",
+            data: $(this).serializeArray(),
+            success: function (data) {
+		clearOverlays();
+                $("#result").html(data);
+		var states_daily_split = data.split("~");
 
-            });
-	    // }, 1000);
-	// }
+		// check if states_daily_split[0] length == 0
+
+		var severe_weathers = states_daily_split[0].split(";");
+		// var states = states_daily_split[0].split(",");
+		// for (var state of states){
+			// addOverlay(state);
+		// }
+		var severe_exists = 0;
+		for (var sev_weth of severe_weathers)
+		{
+			if(sev_weth.length > 2)
+			{
+				severe_exists = 1;
+				addOverlay(sev_weth);
+			}
+		}
+/*
+		// plotting daily weather
+		var daily_split_rows = states_daily_split[1].split(";");
+		if(daily_split_rows.length > 0) {
+			for(var i = 0; i < daily_split_rows.length; i++) {
+				row = daily_split_rows[i];
+				if(row.length > 2) {
+					addMarker(row, severe_exists);
+				}
+			}
+		}
+*/
+            },
+            error: function (jXHR, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        });
     });
 });

@@ -6,7 +6,7 @@
 	$sql = "SELECT * FROM hurricanes as h WHERE h.Category>=$lower and h.Category<=$upper ORDER BY h.Category DESC";
 	$res = mysqli_query($link,$sql);
 	$row = mysqli_fetch_array($res,MYSQL_ASSOC);
-	echo '<div class ="text-center"> <fieldset><legend><strong>Hurricanes</strong> </legend> </fieldset></div>';
+	echo '<div class ="text-center"> <fieldset><legend><strong style="color:white;">Hurricanes</strong> </legend> </fieldset></div>';
 	echo "<div class = ".'"table.responsive">';
 	echo "<table class = ".'"table">';
 	echo "<thead>";
