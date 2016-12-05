@@ -72,7 +72,7 @@
 
 	if($severe_weather_selected == True && $received_severe_data == False)
 	{
-		echo "Sorry your results could not be found";
+		echo "?";
 	}
 	else {
 

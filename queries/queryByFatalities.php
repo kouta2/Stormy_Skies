@@ -14,5 +14,6 @@
 				}
 			} 
 		}
+		echo '';
 	mysqli_close($link);
 ?>

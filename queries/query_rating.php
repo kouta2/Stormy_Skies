@@ -185,6 +185,13 @@
 			</form>
 		</div> <!--close query body-->	
 
+		<div class = "row">
+			<div class="col-md-5"></div>
+			<div class = "col-md-2"> <span id= "sorry" style="text-align: center;"></span></div>
+			<div class="col-md-5"></div>
+
+		</div>
+
 	<span id="result_earthquakes"></span>
 	<span id="result_hurricanes"></span>
 	<span id="result_tornadoes"></span>

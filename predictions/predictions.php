@@ -43,7 +43,7 @@
 		      <ul class="nav navbar-nav navbar-right">
 		      	<li>
 		      	  	<p class="navbar-btn">
-                    	<a href="insert/insert_daily.php" class="btn btn-success">Add Data</a>
+                    	<a href="../insert/insert_daily.php" class="btn btn-success">Add Data</a>
                 	</p>
                 </li>
 		        
@@ -73,6 +73,13 @@
 
 			</div>
 			</form>
+
+			<div class = "row">
+				<div class="col-md-5"></div>
+				<div class = "col-md-2"> <span id= "sorry" style="text-align: center;"></span></div>
+				<div class="col-md-5"></div>
+			</div>
+
 			<div class = "row">
 				<div class = "col-md-2">
 					<ul style = "list-style-type: none;">
@@ -98,7 +105,8 @@
 			<div class = "row">
 				<div class = "col-md-2"></div>
 				<div class = "col-md-8">
-					<div id = "progress" class="progress">	      		
+					<div id = "progress" class="progress">
+		      		
 		   		 	</div>
 		   		 </div>	
 		   		 

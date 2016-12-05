@@ -78,7 +78,15 @@ $(document).ready(function () {
             data: $(this).serializeArray(),
             success: function (data) {
 		clearOverlays();
-                $("#result").html(data);
+                //$("#result").html(data);
+                if(data===''){	
+                	$("#sorry").html('NO RESULTS FOUND');
+			return;
+		}
+		else
+		{	
+                	$("#sorry").html(null);
+		}
 		var states = data.split(",");
 		for (var state of states){
 			addOverlay(state);

@@ -18,8 +18,8 @@
     	
 	</head>
 
-  	<body style="background-image: url(../img/background.jpg); color: white;" >
-		<nav style = "border-style: none;"class="navbar navbar-default navbar-custom">
+  	<body style="background-image: url(../img/background.jpg); color: white;">
+		<nav class="navbar navbar-default navbar-custom">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -33,8 +33,8 @@
 		      <ul class="nav navbar-nav">
 		        
 
-		        <li><a href="#" style = "color:white;" class = "active" >Queries</a></li>
-		        <li><a href="../predictions/predictions.php" style = "color:white;">Playback</a></li>
+		        <li><a style = "color:white;" href="#" class = "active" >Queries</a></li>
+		        <li><a style = "color:white;" href="../predictions/predictions.php">Playback</a></li>
 		        
 		      </ul>
 
@@ -57,9 +57,9 @@
 
 			<ul class="nav nav-tabs">
 			  	<li role="presentation"><a style = "color:white;" href="predictions.php">Annual</a></li>
-			 	<li role="presentation" class="active"><a class = "tab-custom-active" href="query_date.php">Date</a></li>
-			  	<li role="presentation"><a style = "color:white;" href="query_fatalities.php">Fatalities</a></li>
-			  	<li role="presentation"><a style = "color:white;" href="query_rating.php">Rating</a></li>
+			 	<li role="presentation" class="active"><a href="query_date.php">Date</a></li>
+			  	<li style = "color:white;" role="presentation"><a style = "color:white;" href="query_fatalities.php">Fatalities</a></li>
+			  	<li style = "color:white;" role="presentation"><a style = "color:white;" href="query_rating.php">Rating</a></li>
 
 			</ul>
 
@@ -115,6 +115,14 @@
 			</div>
 			</form>
 		</div> <!--close query body-->
+
+		<div class = "row">
+			<div class="col-md-5"></div>
+			<div class = "col-md-2"> <span id= "sorry" style="text-align: center;"></span></div>
+			<div class="col-md-5"></div>
+
+		</div>
+
 		<div class = "row">
 				<div class = "col-md-2">
 					<ul style = "list-style-type: none;">
@@ -129,7 +137,7 @@
 				</div>
 
 				<div class = "col-md-8">
-					<div id="map" style="height:600px; color:black;"></div>
+					<div id="map" style="height:600px; color:black"></div>
 				</div>
 
 				<div class = "col-md-2">

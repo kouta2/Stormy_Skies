@@ -126,7 +126,9 @@
 						<!-- div to hold the jumbotron footer -->
 						<div class = "footer">
 							<h3 style = "text-align: center;vertical-align: middle;"> Check us out on YouTube! </h3>
-							<div style = "text-align: center;vertical-align: middle;"><button  class = "btn btn-danger"> Go! </button></div>
+							<div style = "text-align: center;vertical-align: middle;">
+								<a href= "https://youtu.be/LybR9j3SECY"><button   class = "btn btn-danger"> Go! </button></a>
+							</div>
 						</div>	
 						
 
@@ -136,17 +138,16 @@
 
 					<div class = "col-md-4">
 
-					<p> 
-						Here at Stormy Skies you can search through decades worth of daily and severe weather information. You can search by casualties,
-						by state, and more!
-					</p>
+					<h4> 
+						Here at Stormy Skies you can scan through decades worth of daily and severe weather information. 
+					</h4>
 
-					<p></p>
+					<h4>You can search by date, weather type, fatalities, and more!</h4>  
 
-					<p>
-						You can also see all your data displayed on a map of the U.S!
 
-					</p>
+					<h4> You can see all your data displayed on a map of the U.S! </h4>
+
+					<h4> Use our playback feature to see a year of temperature data right before your eyes! </h4>
 
 					</div>
 				</div>

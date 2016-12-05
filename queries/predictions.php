@@ -88,6 +88,13 @@
 			</div>
 
 			<div class = "row">
+				<div class="col-md-5"></div>
+					<div class = "col-md-2"> <span id= "sorry" style="text-align: center;"></span></div>
+				<div class="col-md-5"></div>
+
+			</div>
+
+			<div class = "row">
 				<div class = "col-md-2">
 					<ul style = "list-style-type: none;">
 						<li><h3><span class = "label label-default" style = "background-color: #660066;">Tornadoes</span></h3></li>

@@ -223,7 +223,7 @@ $(document).ready(function () {
             data: $(this).serializeArray(),
             success: function (data) {
 		clearOverlays();
-                $("#result").html(data);
+                //$("#result").html(data);
 		var states_daily_split = data.split("~");
 
 		// check if states_daily_split[0] length == 0

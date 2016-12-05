@@ -345,7 +345,7 @@ $(document).ready(function () {
                 data: $(this).serializeArray(), // ({date: temp}), // .serializeArray(), 
                 success: function (data) {
 		    clearOverlays();
-                    $("#result").html(data);
+                    // $("#result").html(data);
 		    plotEveryDay(data);
                 },
                 error: function (jXHR, textStatus, errorThrown) {
